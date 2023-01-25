@@ -53,7 +53,7 @@ knitr::include_graphics('casa0023_wk2_xaringan_files/img/Sentinel_2-white.jpg')
 
 ???
 
-Image credit: [Wikimedia Commons](https://en.wikipedia.org/wiki/Sentinel-2#/media/File:Sentinel_2-IMG_5873-white_(crop).jpg)
+All text under the three question marks are presentation notes; it is hidden from the presentation slides and only available in presenter mode.
 
 ---
 class: inverse, center, middle
