@@ -6,4 +6,6 @@ Use the navigation bar to switch between chapters/weeks.
 
 \[Add Intro on me\]
 
+This site is built by Joe. To see more about my work visit <https://github.com/joepost>.
+
 This site is built using Quarto. To learn more about Quarto books visit <https://quarto.org/docs/books>.
