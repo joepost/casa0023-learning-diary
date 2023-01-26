@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "CASA0023 Weekly Learning Diary",
     "section": "",
-    "text": "This is a weekly learning diary to document coursework from the module CASA0023 Remotely Sensing Cities and Environments (T2 2023).\nUse the navigation bar to switch between chapters/weeks.\nThis site is built using Quarto. To learn more about Quarto books visit https://quarto.org/docs/books."
+    "text": "This is a weekly learning diary to document coursework from the module CASA0023 Remotely Sensing Cities and Environments (T2 2023).\nUse the navigation bar to switch between chapters/weeks.\n[Add Intro on me]\nThis site is built using Quarto. To learn more about Quarto books visit https://quarto.org/docs/books."
   },
   {
     "objectID": "intro.html",
@@ -30,9 +30,9 @@
   {
     "objectID": "week1.html",
     "href": "week1.html",
-    "title": "2  Week 1",
+    "title": "1  Week 1",
     "section": "",
-    "text": "1 + 1\n\n[1] 2"
+    "text": "Intro; topic"
   },
   {
     "objectID": "week2.html",
@@ -47,5 +47,26 @@
     "title": "4  Week 3",
     "section": "",
     "text": "1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "week1.html#summary",
+    "href": "week1.html#summary",
+    "title": "1  Week 1",
+    "section": "1.1 Summary",
+    "text": "1.1 Summary\nText"
+  },
+  {
+    "objectID": "week1.html#application",
+    "href": "week1.html#application",
+    "title": "1  Week 1",
+    "section": "1.2 Application",
+    "text": "1.2 Application\nText"
+  },
+  {
+    "objectID": "week1.html#reflection",
+    "href": "week1.html#reflection",
+    "title": "1  Week 1",
+    "section": "1.3 Reflection",
+    "text": "1.3 Reflection\nText"
   }
 ]
