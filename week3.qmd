@@ -1,7 +1,15 @@
-# Week 3
+---
+title: "Week 3"
+---
 
-In summary, this book has no content whatsoever.
+## Summary
 
-```{r}
-1 + 1
-```
+Text
+
+## Application
+
+Text
+
+## Reflection
+
+Text

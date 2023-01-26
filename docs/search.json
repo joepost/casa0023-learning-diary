@@ -39,14 +39,14 @@
     "href": "week2.html",
     "title": "2  Week 2",
     "section": "",
-    "text": "1 + 1\n\n[1] 2"
+    "text": "Xaringan Presentation:"
   },
   {
     "objectID": "week3.html",
     "href": "week3.html",
     "title": "3  Week 3",
     "section": "",
-    "text": "1 + 1\n\n[1] 2"
+    "text": "Text"
   },
   {
     "objectID": "week1.html#summary",
@@ -89,5 +89,19 @@
     "title": "4  Week 4",
     "section": "4.3 Reflection",
     "text": "4.3 Reflection\nText"
+  },
+  {
+    "objectID": "week3.html#application",
+    "href": "week3.html#application",
+    "title": "3  Week 3",
+    "section": "3.2 Application",
+    "text": "3.2 Application\nText"
+  },
+  {
+    "objectID": "week3.html#reflection",
+    "href": "week3.html#reflection",
+    "title": "3  Week 3",
+    "section": "3.3 Reflection",
+    "text": "3.3 Reflection\nText"
   }
 ]
