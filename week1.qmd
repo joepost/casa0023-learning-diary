@@ -1,7 +1,15 @@
 # Week 1
 
-In summary, this book has no content whatsoever.
+Intro; topic
 
-```{r}
-1 + 1
-```
+## Summary
+
+Text
+
+## Application
+
+Text
+
+## Reflection
+
+Text

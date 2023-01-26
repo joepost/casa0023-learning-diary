@@ -1,9 +1,7 @@
 # Preface {.unnumbered}
 
-This is a Quarto book.
+This is a weekly learning diary to document coursework from the module *CASA0023 Remotely Sensing Cities and Environments* (T2 2023).
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+Use the navigation bar to switch between chapters/weeks.
 
-```{r}
-1 + 1
-```
+This site is built using Quarto. To learn more about Quarto books visit <https://quarto.org/docs/books>.
