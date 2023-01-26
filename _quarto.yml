@@ -3,12 +3,11 @@ project:
   output-dir: docs
 
 book:
-  title: "quarto_book_sandbox"
+  title: "CASA0023 Weekly Learning Diary"
   author: "Joe Post"
   date: "19/01/2023"
   chapters:
     - index.qmd
-    - intro.qmd
     - week1.qmd
     - week2.qmd
     - week3.qmd
