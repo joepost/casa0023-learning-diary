@@ -1,8 +1,8 @@
-# Preface {.unnumbered}
+# Welcome {.unnumbered}
 
 This is a weekly learning diary to document coursework from the module *CASA0023 Remotely Sensing Cities and Environments* (T2 2023).
 
-Use the navigation bar to switch between chapters/weeks.
+Use the navigation bar to switch between chapters/weeks. There is also a Glossary page which collects and explains key remote sensing terms.
 
 \[Add Intro on me\]
 

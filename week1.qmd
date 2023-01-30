@@ -1,12 +1,35 @@
-# Week 1
+# Introduction to Remote Sensing
 
-Intro; topic
+The topic of this week's learning diary are an introduction to remote sensing, the principles of EMR, types of satellites and sensors, and sources of remote sensing data.
+
+The practical session for this week introduced methods for extracting open access remote sensing data, including Sentinel data from the ESA's [Copernicus Open Access Hub](https://scihub.copernicus.eu/dhus/#/home) and Landsat data from the USGS [EarthExplorer](https://earthexplorer.usgs.gov/).
 
 ## Summary
 
-Text
+There is a wide variety of types of remote sensors and remote sensing data, and an equally wide variation in application. Some examples include:
 
-## Application
++---------------------------------------------------------------+-----------------------------------------------------------------------------------------------+-----------------------------------------------+
+| Earth Observation Data Source                                 | Operator                                                                                      | Application Examples                          |
++===============================================================+===============================================================================================+===============================================+
+| [Dynamic World](https://dynamicworld.app/about/)              | Google Earth Engine (GEE) app, developed jointly by Google and the World Resources Institute. | Real-time, high resolution (\~10m) land cover |
++---------------------------------------------------------------+-----------------------------------------------------------------------------------------------+-----------------------------------------------+
+| [Landsat](https://landsat.gsfc.nasa.gov/)                     | NASA/USGS                                                                                     | \- Urban/green space coverage                 |
+|                                                               |                                                                                               | - Urban heat island                           |
+|                                                               |                                                                                               | - Illegal logging                             |
+|                                                               |                                                                                               | - Natural disasters (bushfire, flooding)      |
++---------------------------------------------------------------+-----------------------------------------------------------------------------------------------+-----------------------------------------------+
+| [Sentinel](https://sentinels.copernicus.eu/web/sentinel/home) | ESA (European Space Agency)                                                                   | \- Pollution                                  |
+|                                                               |                                                                                               | - Illegal logging                             |
+|                                                               |                                                                                               | - Urban heat island\                          |
+|                                                               |                                                                                               | - Oceanic monitoring                          |
+|                                                               |                                                                                               | - Natural disasters                           |
++---------------------------------------------------------------+-----------------------------------------------------------------------------------------------+-----------------------------------------------+
+
+### What is remote sensing?
+
+At its simplest, remote sensing is the collection of data or information about an entity (such as an object or geographic area) from a distance. In practice, this usually refers to the use of airborne or orbiting sensors designed to measure certain properties of electromagnetic energy exiting an object/area [@jensenIntroductoryDigitalImage2015].
+
+## Application 
 
 Text
 

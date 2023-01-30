@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "CASA0023 Weekly Learning Diary",
     "section": "",
-    "text": "This is a weekly learning diary to document coursework from the module CASA0023 Remotely Sensing Cities and Environments (T2 2023).\nUse the navigation bar to switch between chapters/weeks.\n[Add Intro on me]\nThis site is built by Joe. To see more about my work visit https://github.com/joepost.\nThis site is built using Quarto. To learn more about Quarto books visit https://quarto.org/docs/books."
+    "text": "This is a weekly learning diary to document coursework from the module CASA0023 Remotely Sensing Cities and Environments (T2 2023).\nUse the navigation bar to switch between chapters/weeks. There is also a Glossary page which collects and explains key remote sensing terms.\n[Add Intro on me]\nThis site is built by Joe. To see more about my work visit https://github.com/joepost.\nThis site is built using Quarto. To learn more about Quarto books visit https://quarto.org/docs/books."
   },
   {
     "objectID": "intro.html",
@@ -30,16 +30,16 @@
   {
     "objectID": "week1.html",
     "href": "week1.html",
-    "title": "1  Week 1",
+    "title": "1  Introduction to Remote Sensing",
     "section": "",
-    "text": "Intro; topic"
+    "text": "The topic of this week’s learning diary are an introduction to remote sensing, the principles of EMR, types of satellites and sensors, and sources of remote sensing data.\nThe practical session for this week introduced methods for extracting open access remote sensing data, including Sentinel data from the ESA’s Copernicus Open Access Hub and Landsat data from the USGS EarthExplorer."
   },
   {
     "objectID": "week2.html",
     "href": "week2.html",
     "title": "2  Week 2",
     "section": "",
-    "text": "Xaringan Presentation:"
+    "text": "To view this presentation full-screen, click here."
   },
   {
     "objectID": "week3.html",
@@ -51,23 +51,23 @@
   {
     "objectID": "week1.html#summary",
     "href": "week1.html#summary",
-    "title": "1  Week 1",
+    "title": "1  Introduction to Remote Sensing",
     "section": "1.1 Summary",
-    "text": "1.1 Summary\nText"
+    "text": "1.1 Summary\nThere is a wide variety of types of remote sensors and remote sensing data, and an equally wide variation in application. Some examples include:\n\n\n\nEarth Observation Data Source\nOperator\nApplication Examples\n\n\n\n\nDynamic World\nGoogle Earth Engine (GEE) app, developed jointly by Google and the World Resources Institute.\nReal-time, high resolution (~10m) land cover\n\n\nLandsat\nNASA/USGS\n- Urban/green space coverage - Urban heat island - Illegal logging - Natural disasters (bushfire, flooding)\n\n\nSentinel\nESA (European Space Agency)\n- Pollution - Illegal logging - Urban heat island\n- Oceanic monitoring - Natural disasters\n\n\n\n\n1.1.1 What is remote sensing?\nAt its simplest, remote sensing is the collection of data or information about an entity (such as an object or geographic area) from a distance. In practice, this usually refers to the use of airborne or orbiting sensors designed to measure certain properties of electromagnetic energy exiting an object/area (Jensen 2015)."
   },
   {
     "objectID": "week1.html#application",
     "href": "week1.html#application",
-    "title": "1  Week 1",
+    "title": "1  Introduction to Remote Sensing",
     "section": "1.2 Application",
     "text": "1.2 Application\nText"
   },
   {
     "objectID": "week1.html#reflection",
     "href": "week1.html#reflection",
-    "title": "1  Week 1",
+    "title": "1  Introduction to Remote Sensing",
     "section": "1.3 Reflection",
-    "text": "1.3 Reflection\nText"
+    "text": "1.3 Reflection\nText\n\n\n\n\nJensen, John R. 2015. Introductory Digital Image Processing: A Remote Sensing Perspective. 4th ed. Prentice-Hall Inc."
   },
   {
     "objectID": "week4.html",
