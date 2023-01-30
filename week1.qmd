@@ -29,6 +29,21 @@ There is a wide variety of types of remote sensors and remote sensing data, and 
 
 At its simplest, remote sensing is the collection of data or information about an entity (such as an object or geographic area) from a distance. In practice, this usually refers to the use of airborne or orbiting sensors designed to measure certain properties of electromagnetic energy exiting an object/area [@jensenIntroductoryDigitalImage2015].
 
+::: callout-note
+**The Electromagnetic Spectrum (EMS)**
+
+Remote sensors are often designed to measure a specific band of the electromagnetic spectrum, such as the visible light spectrum or near infrared (NIR).
+
+Different materials (physical, biological, chemical) reflect and absorb energy at different points along the spectrum; therefore different sections of the EMS are relevant for different applications. For example, analysing NIR radiation can help to identify vegetation in earth observation data, and even the health or 'stress' state of the plant [@tempfliPrinciplesRemoteSensing2009], in ways that just analysing the visible spectrum is unable to.
+:::
+
+### Types of remote sensing
+
+| Type    | Details                                                                                                 | Examples |
+|---------|---------------------------------------------------------------------------------------------------------|----------|
+| Passive | Use energy that is available in the environment - in most cases, this is reflected energy from the sun. |          |
+| Active  | Emit an energy source and then detect the reflection of this energy from the remote surface.            |          |
+
 ## Application 
 
 Text
