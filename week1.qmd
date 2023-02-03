@@ -13,16 +13,23 @@ There is a wide variety of types of remote sensors and remote sensing data, and 
 +===============================================================+===============================================================================================+===============================================+
 | [Dynamic World](https://dynamicworld.app/about/)              | Google Earth Engine (GEE) app, developed jointly by Google and the World Resources Institute. | Real-time, high resolution (\~10m) land cover |
 +---------------------------------------------------------------+-----------------------------------------------------------------------------------------------+-----------------------------------------------+
-| [Landsat](https://landsat.gsfc.nasa.gov/)                     | NASA/USGS                                                                                     | \- Urban/green space coverage                 |
-|                                                               |                                                                                               | - Urban heat island                           |
-|                                                               |                                                                                               | - Illegal logging                             |
-|                                                               |                                                                                               | - Natural disasters (bushfire, flooding)      |
+| [Landsat](https://landsat.gsfc.nasa.gov/)                     | NASA/USGS                                                                                     | -   Urban/green space coverage                |
+|                                                               |                                                                                               |                                               |
+|                                                               |                                                                                               | -   Urban heat island                         |
+|                                                               |                                                                                               |                                               |
+|                                                               |                                                                                               | -   Illegal logging                           |
+|                                                               |                                                                                               |                                               |
+|                                                               |                                                                                               | -   Natural disasters (bushfire, flooding)    |
 +---------------------------------------------------------------+-----------------------------------------------------------------------------------------------+-----------------------------------------------+
-| [Sentinel](https://sentinels.copernicus.eu/web/sentinel/home) | ESA (European Space Agency)                                                                   | \- Pollution                                  |
-|                                                               |                                                                                               | - Illegal logging                             |
-|                                                               |                                                                                               | - Urban heat island\                          |
-|                                                               |                                                                                               | - Oceanic monitoring                          |
-|                                                               |                                                                                               | - Natural disasters                           |
+| [Sentinel](https://sentinels.copernicus.eu/web/sentinel/home) | ESA (European Space Agency)                                                                   | -   Pollution                                 |
+|                                                               |                                                                                               |                                               |
+|                                                               |                                                                                               | -   Illegal logging                           |
+|                                                               |                                                                                               |                                               |
+|                                                               |                                                                                               | -   Urban heat island                         |
+|                                                               |                                                                                               |                                               |
+|                                                               |                                                                                               | -   Oceanic monitoring                        |
+|                                                               |                                                                                               |                                               |
+|                                                               |                                                                                               | -   Natural disasters                         |
 +---------------------------------------------------------------+-----------------------------------------------------------------------------------------------+-----------------------------------------------+
 
 ### What is remote sensing?
@@ -32,19 +39,30 @@ At its simplest, remote sensing is the collection of data or information about a
 ::: callout-note
 **The Electromagnetic Spectrum (EMS)**
 
+Electromagnetic radiation is the flow of energy travelling at the speed of light. It encompasses a spectrum that includes visible light, radio waves, and x-rays, among others, which have different scales of wave frequency and intensity (amplitude).
+
 Remote sensors are often designed to measure a specific band of the electromagnetic spectrum, such as the visible light spectrum or near infrared (NIR).
 
 Different materials (physical, biological, chemical) reflect and absorb energy at different points along the spectrum; therefore different sections of the EMS are relevant for different applications. For example, analysing NIR radiation can help to identify vegetation in earth observation data, and even the health or 'stress' state of the plant [@tempfliPrinciplesRemoteSensing2009], in ways that just analysing the visible spectrum is unable to.
+
+![Wavelengths along the electromagnetic spectrum. Source: [@tempfliPrinciplesRemoteSensing2009]](img/em-spectrum-tempfli.png){fig-align="center"}
 :::
+
+Radiation (usually from the sun) is reflected by an object and this reflected energy is then detected by a remote sensor. However, there are several processes that affect and transform this energy due to interactions with the Earth's surface and the atmosphere before the energy reaches the sensor.
+
+![Surface and atmospheric interactions of radiation. Source: \[\@tempfliPrinciplesRemoteSensing2009\]](img/interactions-tempfli.png)
 
 ### Types of remote sensing
 
++---------+---------------------------------------------------------------------------------------------------------+----------+
 | Type    | Details                                                                                                 | Examples |
-|---------|---------------------------------------------------------------------------------------------------------|----------|
++=========+=========================================================================================================+==========+
 | Passive | Use energy that is available in the environment - in most cases, this is reflected energy from the sun. |          |
++---------+---------------------------------------------------------------------------------------------------------+----------+
 | Active  | Emit an energy source and then detect the reflection of this energy from the remote surface.            |          |
++---------+---------------------------------------------------------------------------------------------------------+----------+
 
-## Application 
+## Application
 
 Text
 

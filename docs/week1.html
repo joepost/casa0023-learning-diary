@@ -154,6 +154,7 @@ div.csl-indent {
   <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">1.1</span>  Summary</a>
   <ul class="collapse">
   <li><a href="#what-is-remote-sensing" id="toc-what-is-remote-sensing" class="nav-link" data-scroll-target="#what-is-remote-sensing"><span class="toc-section-number">1.1.1</span>  What is remote sensing?</a></li>
+  <li><a href="#types-of-remote-sensing" id="toc-types-of-remote-sensing" class="nav-link" data-scroll-target="#types-of-remote-sensing"><span class="toc-section-number">1.1.2</span>  Types of remote sensing</a></li>
   </ul></li>
   <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">1.2</span>  Application</a></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">1.3</span>  Reflection</a></li>
@@ -201,19 +202,87 @@ div.csl-indent {
 <tr class="even">
 <td><a href="https://landsat.gsfc.nasa.gov/">Landsat</a></td>
 <td>NASA/USGS</td>
-<td>- Urban/green space coverage - Urban heat island - Illegal logging - Natural disasters (bushfire, flooding)</td>
+<td><ul>
+<li><p>Urban/green space coverage</p></li>
+<li><p>Urban heat island</p></li>
+<li><p>Illegal logging</p></li>
+<li><p>Natural disasters (bushfire, flooding)</p></li>
+</ul></td>
 </tr>
 <tr class="odd">
 <td><a href="https://sentinels.copernicus.eu/web/sentinel/home">Sentinel</a></td>
 <td>ESA (European Space Agency)</td>
-<td>- Pollution - Illegal logging - Urban heat island<br>
-- Oceanic monitoring - Natural disasters</td>
+<td><ul>
+<li><p>Pollution</p></li>
+<li><p>Illegal logging</p></li>
+<li><p>Urban heat island</p></li>
+<li><p>Oceanic monitoring</p></li>
+<li><p>Natural disasters</p></li>
+</ul></td>
 </tr>
 </tbody>
 </table>
 <section id="what-is-remote-sensing" class="level3" data-number="1.1.1">
 <h3 data-number="1.1.1" class="anchored" data-anchor-id="what-is-remote-sensing"><span class="header-section-number">1.1.1</span> What is remote sensing?</h3>
 <p>At its simplest, remote sensing is the collection of data or information about an entity (such as an object or geographic area) from a distance. In practice, this usually refers to the use of airborne or orbiting sensors designed to measure certain properties of electromagnetic energy exiting an object/area <span class="citation" data-cites="jensenIntroductoryDigitalImage2015">(<a href="references.html#ref-jensenIntroductoryDigitalImage2015" role="doc-biblioref">Jensen 2015</a>)</span>.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>The Electromagnetic Spectrum (EMS)</strong></p>
+<p>Electromagnetic radiation is the flow of energy travelling at the speed of light. It encompasses a spectrum that includes visible light, radio waves, and x-rays, among others, which have different scales of wave frequency and intensity (amplitude).</p>
+<p>Remote sensors are often designed to measure a specific band of the electromagnetic spectrum, such as the visible light spectrum or near infrared (NIR).</p>
+<p>Different materials (physical, biological, chemical) reflect and absorb energy at different points along the spectrum; therefore different sections of the EMS are relevant for different applications. For example, analysing NIR radiation can help to identify vegetation in earth observation data, and even the health or ‘stress’ state of the plant <span class="citation" data-cites="tempfliPrinciplesRemoteSensing2009">(<a href="references.html#ref-tempfliPrinciplesRemoteSensing2009" role="doc-biblioref">Tempfli et al. 2009</a>)</span>, in ways that just analysing the visible spectrum is unable to.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/em-spectrum-tempfli.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Wavelengths along the electromagnetic spectrum. Source: <span class="citation" data-cites="tempfliPrinciplesRemoteSensing2009">(<a href="references.html#ref-tempfliPrinciplesRemoteSensing2009" role="doc-biblioref">Tempfli et al. 2009</a>)</span></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Radiation (usually from the sun) is reflected by an object and this reflected energy is then detected by a remote sensor. However, there are several processes that affect and transform this energy due to interactions with the Earth’s surface and the atmosphere before the energy reaches the sensor.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/interactions-tempfli.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Surface and atmospheric interactions of radiation. Source: [@tempfliPrinciplesRemoteSensing2009]</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="types-of-remote-sensing" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="types-of-remote-sensing"><span class="header-section-number">1.1.2</span> Types of remote sensing</h3>
+<table class="table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 82%">
+<col style="width: 8%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Details</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Passive</td>
+<td>Use energy that is available in the environment - in most cases, this is reflected energy from the sun.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Active</td>
+<td>Emit an energy source and then detect the reflection of this energy from the remote surface.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
 <section id="application" class="level2" data-number="1.2">
@@ -228,6 +297,9 @@ div.csl-indent {
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
 <div id="ref-jensenIntroductoryDigitalImage2015" class="csl-entry" role="doc-biblioentry">
 Jensen, John R. 2015. <em>Introductory Digital Image Processing: A Remote Sensing Perspective.</em> 4th ed. <span>Prentice-Hall Inc.</span>
+</div>
+<div id="ref-tempfliPrinciplesRemoteSensing2009" class="csl-entry" role="doc-biblioentry">
+Tempfli, K., G. C. Huurneman, L. L. F. Janssen, and N. Kerle, eds. 2009. <em>Principles of Remote Sensing : An Introductory Textbook</em>. <span>International Institute for Geo-Information Science and Earth Observation</span>. <a href="https://research.utwente.nl/en/publications/principles-of-remote-sensing-an-introductory-textbook-4">https://research.utwente.nl/en/publications/principles-of-remote-sensing-an-introductory-textbook-4</a>.
 </div>
 </div>
 </section>
