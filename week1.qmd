@@ -48,19 +48,29 @@ Different materials (physical, biological, chemical) reflect and absorb energy a
 ![Wavelengths along the electromagnetic spectrum. Source: [@tempfliPrinciplesRemoteSensing2009]](img/em-spectrum-tempfli.png){fig-align="center"}
 :::
 
-Radiation (usually from the sun) is reflected by an object and this reflected energy is then detected by a remote sensor. However, there are several processes that affect and transform this energy due to interactions with the Earth's surface and the atmosphere before the energy reaches the sensor.
+Radiation (usually from the sun) is reflected by an object and this reflected energy is then detected by a remote sensor. However, there are several processes that affect and transform this energy due to interactions with the Earth's surface and the atmosphere before the energy reaches the sensor. In many cases, scattering of radiation in the atmosphere requires *image correction* before the data can be used. This process is covered in @sec-week3summary.
 
 ![Surface and atmospheric interactions of radiation. Source: \[\@tempfliPrinciplesRemoteSensing2009\]](img/interactions-tempfli.png)
 
 ### Types of remote sensing
 
-+---------+---------------------------------------------------------------------------------------------------------+----------+
-| Type    | Details                                                                                                 | Examples |
-+=========+=========================================================================================================+==========+
-| Passive | Use energy that is available in the environment - in most cases, this is reflected energy from the sun. |          |
-+---------+---------------------------------------------------------------------------------------------------------+----------+
-| Active  | Emit an energy source and then detect the reflection of this energy from the remote surface.            |          |
-+---------+---------------------------------------------------------------------------------------------------------+----------+
++------------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+
+| Type       | Details                                                                                                 | Examples                                                      |
++============+=========================================================================================================+===============================================================+
+| Passive    | Use energy that is available in the environment - in most cases, this is reflected energy from the sun. | Most common form of remote sensor, includes Landsat, SENTINEL |
++------------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+
+| Active     | Emit an energy source and then detect the reflection of this energy from the remote surface.            | RADAR, LiDAR, SAR                                             |
++------------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+
+
+In addition to the two types of remote sensing data, the data itself can be broken up into four metadata attributes:
+
+1.  **Spatial Resolution**: the size of a raster cell (pixel) projected onto the ground. For example, a single pixel might represent a 10m x 10m area, or a 100m x 100m area.
+
+2.  **Spectral Resolution**: the EMR bands that the data is recorded in (e.g. the red, green and blue bands of the visible light spectrum). Hyperspectral data refers to remote sensors that record an almost continuous observation across a range of the EMR spectrum, as opposed to discrete layers for a certain band region.
+
+3.  **Radiometric Resolution**: the range of possible values for a raster cell, expressed in units of bits (e.g. 8-bit, 12-bit). Describes the ability of the sensor to differentiate between small differences in energy.
+
+4.  **Temporal Resolution**: the frequency at which the data is collected (e.g. every few hours, every 16 days, yearly)
 
 ## Application
 
@@ -68,4 +78,18 @@ Text
 
 ## Reflection
 
-Text
+In this introduction week, the topics that stood out to me were the ingenuity of the technical aspects, bridging the gap between the physics of electromagnetic radiation and applying this knowledge to produce very powerful and informative datasets. These aspects include the mechanics behind a sensor's spectral resolution, the translation of images into distributions of pixel values, and the additional considerations of using an active sensor.
+
+**Spectral Resolution**
+
+When reading about a sensor, the band range will often be specified - e.g., a sensor may be described to observe the area of the electromagnetic spectrum between 525 - 605 nm (*nanometres* being a measure of the wavelength). However (and this is quite intuitive when you stop to think about it), the sensor does not actually have such a discrete cut-off at these wavelengths. Detectors are actually sensitive to a region of the EMS, where the maximum sensitivity is at the middle spot of this region, with sensitivity declining as it moves away from this point. The stated range given for sensors uses the Full Width at Half Maximum (FWHM) criteria, which is the range of wavelengths detected at 50% or greater intensity, as shown in the figure below, from [@jensenIntroductoryDigitalImage2015].
+
+![Defining spectral resolution using the Full Width at Half Maximum Criteria](img/jensen-2015-spectral-bandwidth.png)
+
+**Pixel Distributions**
+
+I found conceptualising a remote sensing image as a simple distribution of pixel values a very powerful way to think about how the data can be analysed, understood, and transformed. A practical example of this is the use of histograms to 'stretch' the colours in an image, to improve differentiation and visual interpretation. The histogram of pixel values will commonly follow an approximately normal distribution, but a colour gradient will run linearly from the minimum to the maximum value of the dataset, which will result in a much 'shallower' gradient. Different methods can be used to rectify this, such as stretching or clipping to min/max.
+
+**Impacts of active sensors**
+
+Jensen et al. [@jensenIntroductoryDigitalImage2015] warn that \"powerful active remote sensor systems that emit their own electromagnetic radiation (e.g., LiDAR, RADAR, SONAR) can be intrusive and affect the phenomenon being investigated. Additional research is required to determine how intrusive these active sensors can be.\" (p.8). I would be interested to investigate further what kind of research has been done in this area, or what kind of impacts active sensing methods are hypothesised to have. Is there ever a situation where the process of using an active sensor would disturb the process being observed?
