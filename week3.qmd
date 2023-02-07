@@ -1,10 +1,10 @@
 ---
-title: "Week 3"
+title: "Image Corrections"
 ---
 
 ## Summary {#sec-week3summary}
 
-This section will cover corrections of remote sensing data, to account for atmospheric noise, shadow and distortion, and other processes affecting the raw output. 
+This section will cover corrections of remote sensing data, to account for atmospheric noise, shadow and distortion, and other processes affecting the raw output.
 
 ## Application {#sec-week3application}
 

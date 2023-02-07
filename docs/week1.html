@@ -124,17 +124,17 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 2</span></a>
+  <a href="./week2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Remote Sensor: The OCO-2</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week3.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 3</span></a>
+  <a href="./week3.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Image Corrections</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 4</span></a>
+  <a href="./week4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Case Study: Athens</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -259,9 +259,9 @@ Note
 <h3 data-number="1.1.2" class="anchored" data-anchor-id="types-of-remote-sensing"><span class="header-section-number">1.1.2</span> Types of remote sensing</h3>
 <table class="table">
 <colgroup>
-<col style="width: 5%">
-<col style="width: 59%">
-<col style="width: 35%">
+<col style="width: 7%">
+<col style="width: 57%">
+<col style="width: 34%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -283,20 +283,68 @@ Note
 </tr>
 </tbody>
 </table>
+<p>In addition to the two types of remote sensing data, the data itself can be broken up into four metadata attributes:</p>
+<ol type="1">
+<li><p><strong>Spatial Resolution</strong>: the size of a raster cell (pixel) projected onto the ground. For example, a single pixel might represent a 10m x 10m area, or a 100m x 100m area.</p></li>
+<li><p><strong>Spectral Resolution</strong>: the EMR bands that the data is recorded in (e.g.&nbsp;the red, green and blue bands of the visible light spectrum). Hyperspectral data refers to remote sensors that record an almost continuous observation across a range of the EMR spectrum, as opposed to discrete layers for a certain band region.</p></li>
+<li><p><strong>Radiometric Resolution</strong>: the range of possible values for a raster cell, expressed in units of bits (e.g.&nbsp;8-bit, 12-bit). Describes the ability of the sensor to differentiate between small differences in energy.</p></li>
+<li><p><strong>Temporal Resolution</strong>: the frequency at which the data is collected (e.g.&nbsp;every few hours, every 16 days, yearly)</p></li>
+</ol>
 </section>
 </section>
 <section id="application" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="application"><span class="header-section-number">1.2</span> Application</h2>
-<p>Text</p>
+<p>This week’s practical task involved downloading Sentinel data and Landsat data to investigate using <a href="https://www.qgis.org/en/site/">QGIS</a> and <a href="https://step.esa.int/main/toolboxes/snap/">SNAP</a> software, including the application of a <strong>tasseled-cap transformation</strong>. The tasseled-cap transformation emerged from the development of spectral vegetation indices (SVIs) using multispectral data from the original Landsat mission, launched in 1972 <span class="citation" data-cites="cohenLandsatRoleEcological2004">(<a href="references.html#ref-cohenLandsatRoleEcological2004" role="doc-biblioref">Cohen and Goward 2004</a>)</span>. SVIs are a key tool in ecological and agricultural monitoring using remote sensing data, having the benefit of greater sensitivity to vegetation phenology (i.e.&nbsp;the periodic changes in plant growth across seasons) than analysis of individual spectral bands <span class="citation" data-cites="blairDetectionGreenBrown1977">(<a href="references.html#ref-blairDetectionGreenBrown1977" role="doc-biblioref">Blair and Baumgardner 1977</a>)</span>.</p>
+<p>The tasseled-cap transformation is an extension of SVIs, first developed by Kauth and Thomas <span class="citation" data-cites="kauthTasselledCapGraphic1976">(<a href="references.html#ref-kauthTasselledCapGraphic1976" role="doc-biblioref">1976</a>)</span>, that is intended to capture spectral characteristics of soil, as opposed to just vegetation. It has been iteratively improved over time following improvements in the quality and availability of Landsat data, and is now commonly derived using three indices: <em>Brightness, Greenness</em> and <em>Wetness</em> <span class="citation" data-cites="cohenLandsatRoleEcological2004 cristPhysicallybasedTransformationThematic1984">(<a href="references.html#ref-cohenLandsatRoleEcological2004" role="doc-biblioref">Cohen and Goward 2004</a>; <a href="references.html#ref-cristPhysicallybasedTransformationThematic1984" role="doc-biblioref">Crist and Cicone 1984</a>)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/cohen-2004-tasseledcap.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">An example of the tasseled-cap transformation indices. Source: [@cohenLandsatRoleEcological2004]</figcaption><p></p>
+</figure>
+</div>
+<p>Tasseled-cap transformation continues to be used in ecological applications, such as classifying forest structure <span class="citation" data-cites="dymondPhenologicalDifferencesTasseled2002">(e.g., <a href="references.html#ref-dymondPhenologicalDifferencesTasseled2002" role="doc-biblioref">Dymond, Mladenoff, and Radeloff 2002</a>)</span> or tree species [<span class="citation" data-cites="fassnachtReviewStudiesTree2016">Fassnacht et al. (<a href="references.html#ref-fassnachtReviewStudiesTree2016" role="doc-biblioref">2016</a>)</span>, but has also been applied in urban land classification research - for example, in analysis of urban green space and soil characteristics <span class="citation" data-cites="riddComparisonFourAlgorithms1998">(<a href="references.html#ref-riddComparisonFourAlgorithms1998" role="doc-biblioref">Ridd and Liu 1998</a>)</span>.</p>
 </section>
 <section id="reflection" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">1.3</span> Reflection</h2>
-<p>Text</p>
+<p>In this introduction week, the topics that stood out to me were the ingenuity of the technical aspects, bridging the gap between the physics of electromagnetic radiation and applying this knowledge to produce very powerful and informative datasets. These aspects include the mechanics behind a sensor’s spectral resolution, the translation of images into distributions of pixel values, and the additional considerations of using an active sensor.</p>
+<p><strong>Spectral Resolution</strong></p>
+<p>When reading about a sensor, the band range will often be specified - e.g., a sensor may be described to observe the area of the electromagnetic spectrum between 525 - 605 nm (<em>nanometres</em> being a measure of the wavelength). However (and this is quite intuitive when you stop to think about it), the sensor does not actually have such a discrete cut-off at these wavelengths. Detectors are actually sensitive to a region of the EMS, where the maximum sensitivity is at the middle spot of this region, with sensitivity declining as it moves away from this point. The stated range given for sensors uses the Full Width at Half Maximum (FWHM) criteria, which is the range of wavelengths detected at 50% or greater intensity, as shown in the figure below, from <span class="citation" data-cites="jensenIntroductoryDigitalImage2015">(<a href="references.html#ref-jensenIntroductoryDigitalImage2015" role="doc-biblioref">Jensen 2015</a>)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/jensen-2015-spectral-bandwidth.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Defining spectral resolution using the Full Width at Half Maximum Criteria</figcaption><p></p>
+</figure>
+</div>
+<p><strong>Pixel Distributions</strong></p>
+<p>I found conceptualising a remote sensing image as a simple distribution of pixel values a very powerful way to think about how the data can be analysed, understood, and transformed. A practical example of this is the use of histograms to ‘stretch’ the colours in an image, to improve differentiation and visual interpretation. The histogram of pixel values will commonly follow an approximately normal distribution, but a colour gradient will run linearly from the minimum to the maximum value of the dataset, which will result in a much ‘shallower’ gradient. Different methods can be used to rectify this, such as stretching or clipping to min/max.</p>
+<p><strong>Impacts of active sensors</strong></p>
+<p>Jensen et al. <span class="citation" data-cites="jensenIntroductoryDigitalImage2015">(<a href="references.html#ref-jensenIntroductoryDigitalImage2015" role="doc-biblioref">Jensen 2015</a>)</span> warn that “powerful active remote sensor systems that emit their own electromagnetic radiation (e.g., LiDAR, RADAR, SONAR) can be intrusive and affect the phenomenon being investigated. Additional research is required to determine how intrusive these active sensors can be.” (p.8). I would be interested to investigate further what kind of research has been done in this area, or what kind of impacts active sensing methods are hypothesised to have. In which situation would the process of using an active sensor disturb the process being observed?</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-blairDetectionGreenBrown1977" class="csl-entry" role="doc-biblioentry">
+Blair, B. O., and M. F. Baumgardner. 1977. <span>“Detection of the <span>Green</span> and <span>Brown Wave</span> in <span>Hardwood Canopy Covers Using Multidate</span>, <span>Multispectral Data</span> from <span>LANDSAT-11</span>.”</span> <em>Agronomy Journal</em> 69 (5): 808–11. <a href="https://doi.org/10.2134/agronj1977.00021962006900050019x">https://doi.org/10.2134/agronj1977.00021962006900050019x</a>.
+</div>
+<div id="ref-cohenLandsatRoleEcological2004" class="csl-entry" role="doc-biblioentry">
+Cohen, W. B., and S. N. Goward. 2004. <span>“Landsat’s Role in Ecological Applications of Remote Sensing.”</span> <em>BioScience</em> 54 (6): 535–45. <a href="https://doi.org/10.1641/0006-3568(2004)054[0535:LRIEAO]2.0.CO;2">https://doi.org/10.1641/0006-3568(2004)054[0535:LRIEAO]2.0.CO;2</a>.
+</div>
+<div id="ref-cristPhysicallybasedTransformationThematic1984" class="csl-entry" role="doc-biblioentry">
+Crist, Eric P., and Richard C. Cicone. 1984. <span>“A Physically-Based Transformation of <span>Thematic Mapper</span> Data—<span>The TM Tasseled Cap</span>.”</span> <em>IEEE Transactions on Geoscience and Remote Sensing</em>, no. 3: 256–63.
+</div>
+<div id="ref-dymondPhenologicalDifferencesTasseled2002" class="csl-entry" role="doc-biblioentry">
+Dymond, Caren C., David J. Mladenoff, and Volker C. Radeloff. 2002. <span>“Phenological Differences in <span>Tasseled Cap</span> Indices Improve Deciduous Forest Classification.”</span> <em>Remote Sensing of Environment</em> 80 (3): 460–72.
+</div>
+<div id="ref-fassnachtReviewStudiesTree2016" class="csl-entry" role="doc-biblioentry">
+Fassnacht, F. E., H. Latifi, K. Stereńczak, A. Modzelewska, M. Lefsky, L. T. Waser, C. Straub, and A. Ghosh. 2016. <span>“Review of Studies on Tree Species Classification from Remotely Sensed Data.”</span> <em>Remote Sensing of Environment</em> 186: 64–87. <a href="https://doi.org/10.1016/j.rse.2016.08.013">https://doi.org/10.1016/j.rse.2016.08.013</a>.
+</div>
 <div id="ref-jensenIntroductoryDigitalImage2015" class="csl-entry" role="doc-biblioentry">
 Jensen, John R. 2015. <em>Introductory Digital Image Processing: A Remote Sensing Perspective.</em> 4th ed. <span>Prentice-Hall Inc.</span>
+</div>
+<div id="ref-kauthTasselledCapGraphic1976" class="csl-entry" role="doc-biblioentry">
+Kauth, Richard J., and G. S. Thomas. 1976. <span>“The Tasselled Cap–a Graphic Description of the Spectral-Temporal Development of Agricultural Crops as Seen by <span>Landsat</span>.”</span> In <em><span>LARS</span> Symposia</em>, 159.
+</div>
+<div id="ref-riddComparisonFourAlgorithms1998" class="csl-entry" role="doc-biblioentry">
+Ridd, M. K., and J. Liu. 1998. <span>“A Comparison of Four Algorithms for Change Detection in an Urban Environment.”</span> <em>Remote Sensing of Environment</em> 63 (2): 95–100. <a href="https://doi.org/10.1016/S0034-4257(97)00112-0">https://doi.org/10.1016/S0034-4257(97)00112-0</a>.
 </div>
 <div id="ref-tempfliPrinciplesRemoteSensing2009" class="csl-entry" role="doc-biblioentry">
 Tempfli, K., G. C. Huurneman, L. L. F. Janssen, and N. Kerle, eds. 2009. <em>Principles of Remote Sensing : An Introductory Textbook</em>. <span>International Institute for Geo-Information Science and Earth Observation</span>. <a href="https://research.utwente.nl/en/publications/principles-of-remote-sensing-an-introductory-textbook-4">https://research.utwente.nl/en/publications/principles-of-remote-sensing-an-introductory-textbook-4</a>.
@@ -411,7 +459,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./week2.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 2</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Remote Sensor: The OCO-2</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

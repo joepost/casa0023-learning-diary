@@ -37,14 +37,14 @@
   {
     "objectID": "week2.html",
     "href": "week2.html",
-    "title": "2  Week 2",
+    "title": "2  Remote Sensor: The OCO-2",
     "section": "",
     "text": "To view this presentation full-screen, click here."
   },
   {
     "objectID": "week3.html",
     "href": "week3.html",
-    "title": "3  Week 3",
+    "title": "3  Image Corrections",
     "section": "",
     "text": "This section will cover corrections of remote sensing data, to account for atmospheric noise, shadow and distortion, and other processes affecting the raw output."
   },
@@ -53,40 +53,40 @@
     "href": "week1.html#summary",
     "title": "1  Introduction to Remote Sensing",
     "section": "1.1 Summary",
-    "text": "1.1 Summary\nThere is a wide variety of types of remote sensors and remote sensing data, and an equally wide variation in application. Some examples include:\n\n\n\nEarth Observation Data Source\nOperator\nApplication Examples\n\n\n\n\nDynamic World\nGoogle Earth Engine (GEE) app, developed jointly by Google and the World Resources Institute.\nReal-time, high resolution (~10m) land cover\n\n\nLandsat\nNASA/USGS\n\nUrban/green space coverage\nUrban heat island\nIllegal logging\nNatural disasters (bushfire, flooding)\n\n\n\nSentinel\nESA (European Space Agency)\n\nPollution\nIllegal logging\nUrban heat island\nOceanic monitoring\nNatural disasters\n\n\n\n\n\n1.1.1 What is remote sensing?\nAt its simplest, remote sensing is the collection of data or information about an entity (such as an object or geographic area) from a distance. In practice, this usually refers to the use of airborne or orbiting sensors designed to measure certain properties of electromagnetic energy exiting an object/area (Jensen 2015).\n\n\n\n\n\n\nNote\n\n\n\nThe Electromagnetic Spectrum (EMS)\nElectromagnetic radiation is the flow of energy travelling at the speed of light. It encompasses a spectrum that includes visible light, radio waves, and x-rays, among others, which have different scales of wave frequency and intensity (amplitude).\nRemote sensors are often designed to measure a specific band of the electromagnetic spectrum, such as the visible light spectrum or near infrared (NIR).\nDifferent materials (physical, biological, chemical) reflect and absorb energy at different points along the spectrum; therefore different sections of the EMS are relevant for different applications. For example, analysing NIR radiation can help to identify vegetation in earth observation data, and even the health or ‘stress’ state of the plant (Tempfli et al. 2009), in ways that just analysing the visible spectrum is unable to.\n\n\n\nWavelengths along the electromagnetic spectrum. Source: (Tempfli et al. 2009)\n\n\n\n\nRadiation (usually from the sun) is reflected by an object and this reflected energy is then detected by a remote sensor. However, there are several processes that affect and transform this energy due to interactions with the Earth’s surface and the atmosphere before the energy reaches the sensor. In many cases, scattering of radiation in the atmosphere requires image correction before the data can be used. This process is covered in Section 3.1.\n\n\n\nSurface and atmospheric interactions of radiation. Source: [@tempfliPrinciplesRemoteSensing2009]\n\n\n\n\n1.1.2 Types of remote sensing\n\n\n\n\n\n\n\n\nType\nDetails\nExamples\n\n\n\n\nPassive\nUse energy that is available in the environment - in most cases, this is reflected energy from the sun.\nMost common form of remote sensor, includes Landsat, SENTINEL\n\n\nActive\nEmit an energy source and then detect the reflection of this energy from the remote surface.\nRADAR, LiDAR, SAR"
+    "text": "1.1 Summary\nThere is a wide variety of types of remote sensors and remote sensing data, and an equally wide variation in application. Some examples include:\n\n\n\nEarth Observation Data Source\nOperator\nApplication Examples\n\n\n\n\nDynamic World\nGoogle Earth Engine (GEE) app, developed jointly by Google and the World Resources Institute.\nReal-time, high resolution (~10m) land cover\n\n\nLandsat\nNASA/USGS\n\nUrban/green space coverage\nUrban heat island\nIllegal logging\nNatural disasters (bushfire, flooding)\n\n\n\nSentinel\nESA (European Space Agency)\n\nPollution\nIllegal logging\nUrban heat island\nOceanic monitoring\nNatural disasters\n\n\n\n\n\n1.1.1 What is remote sensing?\nAt its simplest, remote sensing is the collection of data or information about an entity (such as an object or geographic area) from a distance. In practice, this usually refers to the use of airborne or orbiting sensors designed to measure certain properties of electromagnetic energy exiting an object/area (Jensen 2015).\n\n\n\n\n\n\nNote\n\n\n\nThe Electromagnetic Spectrum (EMS)\nElectromagnetic radiation is the flow of energy travelling at the speed of light. It encompasses a spectrum that includes visible light, radio waves, and x-rays, among others, which have different scales of wave frequency and intensity (amplitude).\nRemote sensors are often designed to measure a specific band of the electromagnetic spectrum, such as the visible light spectrum or near infrared (NIR).\nDifferent materials (physical, biological, chemical) reflect and absorb energy at different points along the spectrum; therefore different sections of the EMS are relevant for different applications. For example, analysing NIR radiation can help to identify vegetation in earth observation data, and even the health or ‘stress’ state of the plant (Tempfli et al. 2009), in ways that just analysing the visible spectrum is unable to.\n\n\n\nWavelengths along the electromagnetic spectrum. Source: (Tempfli et al. 2009)\n\n\n\n\nRadiation (usually from the sun) is reflected by an object and this reflected energy is then detected by a remote sensor. However, there are several processes that affect and transform this energy due to interactions with the Earth’s surface and the atmosphere before the energy reaches the sensor. In many cases, scattering of radiation in the atmosphere requires image correction before the data can be used. This process is covered in Section 3.1.\n\n\n\nSurface and atmospheric interactions of radiation. Source: [@tempfliPrinciplesRemoteSensing2009]\n\n\n\n\n1.1.2 Types of remote sensing\n\n\n\n\n\n\n\n\nType\nDetails\nExamples\n\n\n\n\nPassive\nUse energy that is available in the environment - in most cases, this is reflected energy from the sun.\nMost common form of remote sensor, includes Landsat, SENTINEL\n\n\nActive\nEmit an energy source and then detect the reflection of this energy from the remote surface.\nRADAR, LiDAR, SAR\n\n\n\nIn addition to the two types of remote sensing data, the data itself can be broken up into four metadata attributes:\n\nSpatial Resolution: the size of a raster cell (pixel) projected onto the ground. For example, a single pixel might represent a 10m x 10m area, or a 100m x 100m area.\nSpectral Resolution: the EMR bands that the data is recorded in (e.g. the red, green and blue bands of the visible light spectrum). Hyperspectral data refers to remote sensors that record an almost continuous observation across a range of the EMR spectrum, as opposed to discrete layers for a certain band region.\nRadiometric Resolution: the range of possible values for a raster cell, expressed in units of bits (e.g. 8-bit, 12-bit). Describes the ability of the sensor to differentiate between small differences in energy.\nTemporal Resolution: the frequency at which the data is collected (e.g. every few hours, every 16 days, yearly)"
   },
   {
     "objectID": "week1.html#application",
     "href": "week1.html#application",
     "title": "1  Introduction to Remote Sensing",
     "section": "1.2 Application",
-    "text": "1.2 Application\nText"
+    "text": "1.2 Application\nThis week’s practical task involved downloading Sentinel data and Landsat data to investigate using QGIS and SNAP software, including the application of a tasseled-cap transformation. The tasseled-cap transformation emerged from the development of spectral vegetation indices (SVIs) using multispectral data from the original Landsat mission, launched in 1972 (Cohen and Goward 2004). SVIs are a key tool in ecological and agricultural monitoring using remote sensing data, having the benefit of greater sensitivity to vegetation phenology (i.e. the periodic changes in plant growth across seasons) than analysis of individual spectral bands (Blair and Baumgardner 1977).\nThe tasseled-cap transformation is an extension of SVIs, first developed by Kauth and Thomas (1976), that is intended to capture spectral characteristics of soil, as opposed to just vegetation. It has been iteratively improved over time following improvements in the quality and availability of Landsat data, and is now commonly derived using three indices: Brightness, Greenness and Wetness (Cohen and Goward 2004; Crist and Cicone 1984).\n\n\n\nAn example of the tasseled-cap transformation indices. Source: [@cohenLandsatRoleEcological2004]\n\n\nTasseled-cap transformation continues to be used in ecological applications, such as classifying forest structure (e.g., Dymond, Mladenoff, and Radeloff 2002) or tree species [Fassnacht et al. (2016), but has also been applied in urban land classification research - for example, in analysis of urban green space and soil characteristics (Ridd and Liu 1998)."
   },
   {
     "objectID": "week1.html#reflection",
     "href": "week1.html#reflection",
     "title": "1  Introduction to Remote Sensing",
     "section": "1.3 Reflection",
-    "text": "1.3 Reflection\nText\n\n\n\n\nJensen, John R. 2015. Introductory Digital Image Processing: A Remote Sensing Perspective. 4th ed. Prentice-Hall Inc.\n\n\nTempfli, K., G. C. Huurneman, L. L. F. Janssen, and N. Kerle, eds. 2009. Principles of Remote Sensing : An Introductory Textbook. International Institute for Geo-Information Science and Earth Observation. https://research.utwente.nl/en/publications/principles-of-remote-sensing-an-introductory-textbook-4."
+    "text": "1.3 Reflection\nIn this introduction week, the topics that stood out to me were the ingenuity of the technical aspects, bridging the gap between the physics of electromagnetic radiation and applying this knowledge to produce very powerful and informative datasets. These aspects include the mechanics behind a sensor’s spectral resolution, the translation of images into distributions of pixel values, and the additional considerations of using an active sensor.\nSpectral Resolution\nWhen reading about a sensor, the band range will often be specified - e.g., a sensor may be described to observe the area of the electromagnetic spectrum between 525 - 605 nm (nanometres being a measure of the wavelength). However (and this is quite intuitive when you stop to think about it), the sensor does not actually have such a discrete cut-off at these wavelengths. Detectors are actually sensitive to a region of the EMS, where the maximum sensitivity is at the middle spot of this region, with sensitivity declining as it moves away from this point. The stated range given for sensors uses the Full Width at Half Maximum (FWHM) criteria, which is the range of wavelengths detected at 50% or greater intensity, as shown in the figure below, from (Jensen 2015).\n\n\n\nDefining spectral resolution using the Full Width at Half Maximum Criteria\n\n\nPixel Distributions\nI found conceptualising a remote sensing image as a simple distribution of pixel values a very powerful way to think about how the data can be analysed, understood, and transformed. A practical example of this is the use of histograms to ‘stretch’ the colours in an image, to improve differentiation and visual interpretation. The histogram of pixel values will commonly follow an approximately normal distribution, but a colour gradient will run linearly from the minimum to the maximum value of the dataset, which will result in a much ‘shallower’ gradient. Different methods can be used to rectify this, such as stretching or clipping to min/max.\nImpacts of active sensors\nJensen et al. (Jensen 2015) warn that “powerful active remote sensor systems that emit their own electromagnetic radiation (e.g., LiDAR, RADAR, SONAR) can be intrusive and affect the phenomenon being investigated. Additional research is required to determine how intrusive these active sensors can be.” (p.8). I would be interested to investigate further what kind of research has been done in this area, or what kind of impacts active sensing methods are hypothesised to have. In which situation would the process of using an active sensor disturb the process being observed?\n\n\n\n\nBlair, B. O., and M. F. Baumgardner. 1977. “Detection of the Green and Brown Wave in Hardwood Canopy Covers Using Multidate, Multispectral Data from LANDSAT-11.” Agronomy Journal 69 (5): 808–11. https://doi.org/10.2134/agronj1977.00021962006900050019x.\n\n\nCohen, W. B., and S. N. Goward. 2004. “Landsat’s Role in Ecological Applications of Remote Sensing.” BioScience 54 (6): 535–45. https://doi.org/10.1641/0006-3568(2004)054[0535:LRIEAO]2.0.CO;2.\n\n\nCrist, Eric P., and Richard C. Cicone. 1984. “A Physically-Based Transformation of Thematic Mapper Data—The TM Tasseled Cap.” IEEE Transactions on Geoscience and Remote Sensing, no. 3: 256–63.\n\n\nDymond, Caren C., David J. Mladenoff, and Volker C. Radeloff. 2002. “Phenological Differences in Tasseled Cap Indices Improve Deciduous Forest Classification.” Remote Sensing of Environment 80 (3): 460–72.\n\n\nFassnacht, F. E., H. Latifi, K. Stereńczak, A. Modzelewska, M. Lefsky, L. T. Waser, C. Straub, and A. Ghosh. 2016. “Review of Studies on Tree Species Classification from Remotely Sensed Data.” Remote Sensing of Environment 186: 64–87. https://doi.org/10.1016/j.rse.2016.08.013.\n\n\nJensen, John R. 2015. Introductory Digital Image Processing: A Remote Sensing Perspective. 4th ed. Prentice-Hall Inc.\n\n\nKauth, Richard J., and G. S. Thomas. 1976. “The Tasselled Cap–a Graphic Description of the Spectral-Temporal Development of Agricultural Crops as Seen by Landsat.” In LARS Symposia, 159.\n\n\nRidd, M. K., and J. Liu. 1998. “A Comparison of Four Algorithms for Change Detection in an Urban Environment.” Remote Sensing of Environment 63 (2): 95–100. https://doi.org/10.1016/S0034-4257(97)00112-0.\n\n\nTempfli, K., G. C. Huurneman, L. L. F. Janssen, and N. Kerle, eds. 2009. Principles of Remote Sensing : An Introductory Textbook. International Institute for Geo-Information Science and Earth Observation. https://research.utwente.nl/en/publications/principles-of-remote-sensing-an-introductory-textbook-4."
   },
   {
     "objectID": "week4.html",
     "href": "week4.html",
-    "title": "4  Week 4",
+    "title": "4  Case Study: Athens",
     "section": "",
-    "text": "Text"
+    "text": "[Discuss Policy applications of remote sensing data in Athens, specifically focusing on the Urban Heat Island effect, and wildfire monitoring]"
   },
   {
     "objectID": "week4.html#application",
     "href": "week4.html#application",
-    "title": "4  Week 4",
+    "title": "4  Case Study: Athens",
     "section": "4.2 Application",
     "text": "4.2 Application\nText"
   },
   {
     "objectID": "week4.html#reflection",
     "href": "week4.html#reflection",
-    "title": "4  Week 4",
+    "title": "4  Case Study: Athens",
     "section": "4.3 Reflection",
     "text": "4.3 Reflection\nText"
   },
@@ -107,14 +107,14 @@
   {
     "objectID": "week3.html#sec-week3application",
     "href": "week3.html#sec-week3application",
-    "title": "3  Week 3",
+    "title": "3  Image Corrections",
     "section": "3.2 Application",
     "text": "3.2 Application\nText"
   },
   {
     "objectID": "week3.html#sec-week3reflection",
     "href": "week3.html#sec-week3reflection",
-    "title": "3  Week 3",
+    "title": "3  Image Corrections",
     "section": "3.3 Reflection",
     "text": "3.3 Reflection\nText"
   }

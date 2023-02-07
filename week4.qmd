@@ -1,10 +1,10 @@
 ---
-title: "Week 4"
+title: "Case Study: Athens"
 ---
 
 ## Summary
 
-Text
+\[Discuss Policy applications of remote sensing data in Athens, specifically focusing on the Urban Heat Island effect, and wildfire monitoring\]
 
 ## Application
 

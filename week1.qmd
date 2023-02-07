@@ -74,7 +74,13 @@ In addition to the two types of remote sensing data, the data itself can be brok
 
 ## Application
 
-Text
+This week's practical task involved downloading Sentinel data and Landsat data to investigate using [QGIS](https://www.qgis.org/en/site/) and [SNAP](https://step.esa.int/main/toolboxes/snap/) software, including the application of a **tasseled-cap transformation**. The tasseled-cap transformation emerged from the development of spectral vegetation indices (SVIs) using multispectral data from the original Landsat mission, launched in 1972 [@cohenLandsatRoleEcological2004]. SVIs are a key tool in ecological and agricultural monitoring using remote sensing data, having the benefit of greater sensitivity to vegetation phenology (i.e. the periodic changes in plant growth across seasons) than analysis of individual spectral bands [@blairDetectionGreenBrown1977].
+
+The tasseled-cap transformation is an extension of SVIs, first developed by Kauth and Thomas [-@kauthTasselledCapGraphic1976], that is intended to capture spectral characteristics of soil, as opposed to just vegetation. It has been iteratively improved over time following improvements in the quality and availability of Landsat data, and is now commonly derived using three indices: *Brightness, Greenness* and *Wetness* [@cohenLandsatRoleEcological2004; @cristPhysicallybasedTransformationThematic1984].
+
+![An example of the tasseled-cap transformation indices. Source: \[\@cohenLandsatRoleEcological2004\] ](img/cohen-2004-tasseledcap.png)
+
+Tasseled-cap transformation continues to be used in ecological applications, such as classifying forest structure [e.g., @dymondPhenologicalDifferencesTasseled2002] or tree species [@fassnachtReviewStudiesTree2016, but has also been applied in urban land classification research - for example, in analysis of urban green space and soil characteristics [@riddComparisonFourAlgorithms1998].
 
 ## Reflection
 
@@ -92,4 +98,4 @@ I found conceptualising a remote sensing image as a simple distribution of pixel
 
 **Impacts of active sensors**
 
-Jensen et al. [@jensenIntroductoryDigitalImage2015] warn that \"powerful active remote sensor systems that emit their own electromagnetic radiation (e.g., LiDAR, RADAR, SONAR) can be intrusive and affect the phenomenon being investigated. Additional research is required to determine how intrusive these active sensors can be.\" (p.8). I would be interested to investigate further what kind of research has been done in this area, or what kind of impacts active sensing methods are hypothesised to have. Is there ever a situation where the process of using an active sensor would disturb the process being observed?
+Jensen et al. [@jensenIntroductoryDigitalImage2015] warn that "powerful active remote sensor systems that emit their own electromagnetic radiation (e.g., LiDAR, RADAR, SONAR) can be intrusive and affect the phenomenon being investigated. Additional research is required to determine how intrusive these active sensors can be." (p.8). I would be interested to investigate further what kind of research has been done in this area, or what kind of impacts active sensing methods are hypothesised to have. In which situation would the process of using an active sensor disturb the process being observed?
