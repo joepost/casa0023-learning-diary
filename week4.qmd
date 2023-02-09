@@ -6,7 +6,9 @@ title: "Case Study: Athens"
 
 How can remote sensing data be applied to help achieve policy goals?
 
-{{< video https://www.youtube.com/watch?v=WaKrPDso808&ab_channel=TED >}}
+Cities across the globe are introducing policy goals and targets to address issues related to climate change, disaster resilience, and sustainability. This case study explores the approach of the Greek capital, **Athens**, and how a policy to address the Urban Heat Island (UHI) effect and protect residents from deadly heatwaves could incorporate remote sensing data.
+
+{{< video https://youtu.be/WaKrPDso808 >}}
 
 -   Athens Heatwave Action Plan launched in 2016
 
