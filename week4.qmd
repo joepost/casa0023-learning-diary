@@ -6,25 +6,41 @@ title: "Case Study: Athens"
 
 How can remote sensing data be applied to help achieve policy goals?
 
-Cities across the globe are introducing policy goals and targets to address issues related to climate change, disaster resilience, and sustainability. This case study explores the approach of the Greek capital, **Athens**, and how a policy to address the Urban Heat Island (UHI) effect and protect residents from deadly heatwaves could incorporate remote sensing data.
+Cities across the globe are introducing policies and targets to address the growing challenges of climate change, disaster resilience, and sustainability. This case study explores the approach of the Greek capital, **Athens**, and how a policy to address the Urban Heat Island (UHI) effect and protect residents from deadly heatwaves could incorporate remote sensing data.
+
+### The Policy Context
+
+In 2021, the City of Athens appointed a Chief Heat Officer, Elena Myrivili - a European first, and the second globally following a similar appointment in Miami, Florida, in the same year [@harveyAthensAppointsChief2021]. Although a temporary position, Myrivili's role as Chief Heat Officer was designed to raise the profile of heat as the city's deadliest climate event, and to coordinate a metropolitan-scale response to building heat resilience - through strategies such as increased green space and urban canopy, adjusting the design of roads and buildings, and improving systems to warn residents during particularly dangerous heatwaves.
+
+Watch the video below to see Myrivili outline the impacts heat has had on her city, and the broad strategies to combat this.
 
 {{< video https://youtu.be/WaKrPDso808 >}}
 
--   Athens Heatwave Action Plan launched in 2016
+Policy goals outlined by the Chief Heat Officer:
 
--   Appointed a Chief Heat Officer in 2021, tasked with reducing the impacts of extreme heat waves in the Greek capital, and improving resilience to the urban heat island (UHI) effect
+1.  **Increase urban greening**
 
--   Policy goals: increasing green areas, expanding the use of cool materials, increasing shade options, and promoting "cooling routes" in parts of the city where the urban heat island effect is more intense.
+> "The first and most important goal is to make the city greener and to create an infrastructure that would bring more nature and water into the city ... We need to increase the number of parks in Athens that already provide shelter to vulnerable residents. Parks can help a great deal to bring down temperatures in the city; they absorb CO2 emission and retain water, they increase biodiversity, create oxygen, clean the air from microparticles so they also help to fight pollution."
 
--   Under a strategic partnership between the city and the National Observatory of Athens, a digital heatwave warning mechanism created to alert residents via personal computers or smartphones. The mechanism provides the current temperature in the user's location, whether or not they are at risk depending on their age and medical condition, as well as how to reach a cooling spot in case they are at risk
+2.  **Provide immediate relief to the most vulnerable**
 
-Statements from CHO:
+> "The second solution will be carried out in the short-term. The plan is to give wider access to air conditioning to the most vulnerable groups and help them to lower temperatures in their homes during heatwaves. Air conditioning will play a role in this case. We know it increases outdoor heat and CO2 emissions, but it will be necessary to protect people from getting sick or dying."
 
-> "The first and most important goal is to make the city greener and to create an infrastructure that would bring more nature and water into the city ... We need to increase the number of parks in Athens that already provide shelter to vulnerable residents. Parks can help a great deal to bring down temperatures in the city; they absorb CO2 emission and retain water, they increase biodiversity, create oxygen, clean the air from microparticles so they also help to fight pollution." [Eurocities News](https://eurocities.eu/latest/athens-heat-warrior/)
+3.  **Raise awareness and improve risk communication**
 
-"The second solution will be carried out in the short-term. The plan is to give wider access to air conditioning to the most vulnerable groups and help them to lower temperatures in their homes during heatwaves. Air conditioning will play a role in this case. We know it increases outdoor heat and CO2 emissions, but it will be necessary to protect people from getting sick or dying."
+> "We are considering naming heatwaves and categorising them like hurricanes. This will make events more prominent in people's minds, turning weather phenomena into an entity. People are able to think of an event more clearly if they can call it by a name and media can more easily communicate it to their audiences. Categorising heatwaves will help authorities to set up risk management protocols."
 
-"Together with meteorologists and climate scientists, we are considering naming heatwaves and categorising them like hurricanes. This will make events more prominent in people's minds, turning weather phenomena into an entity. People are able to think of an event more clearly if they can call it by a name and media can more easily communicate it to their audiences. Categorising heatwaves will help authorities to set up risk management protocols."
+Source: [@horowitzAthensOnlyGetting2021]
+
+Concurrently, the City of Athens has also developed a [Climate Change Action Plan](https://www.cityofathens.gr/poio-einai-to-schedio-drasis-tis-athinas/ "Note: this page is in Greek") which feeds into much of the work of the Chief Heat Officer, and includes goals to transition 30% of the city surface to vegetation and/or permeable surfaces by 2030, and in the same time frame ensure that 70% of the city's populations has access to green space within a 15 minute walk.
+
+These goals are reflected in both the regional and global context. Athens is prominently involved in European Union initiatives for urban resilience as a signatory to the European Commission's [Covenant of Mayors for Climate and Energy](https://eu-mayors.ec.europa.eu/en/home). In a broader sense, explicitly addressing climate change as an impact on health and livelihoods aligns with the United Nation's Sustainable Development Goals - a high-level framework for directing global patterns of development and resilience. This includes:
+
+-   Goal 3: Good Health and Wellbeing,
+
+-   Goal 11: Sustainable Cities and Communities, and
+
+-   Goal 13: Climate Action
 
 ## Application
 
