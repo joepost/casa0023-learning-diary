@@ -54,13 +54,10 @@ Radiation (usually from the sun) is reflected by an object and this reflected en
 
 ### Types of remote sensing
 
-+------------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+
-| Type       | Details                                                                                                 | Examples                                                      |
-+============+=========================================================================================================+===============================================================+
-| Passive    | Use energy that is available in the environment - in most cases, this is reflected energy from the sun. | Most common form of remote sensor, includes Landsat, SENTINEL |
-+------------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+
-| Active     | Emit an energy source and then detect the reflection of this energy from the remote surface.            | RADAR, LiDAR, SAR                                             |
-+------------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+
+| Type    | Details                                                                                                 | Examples                                                      |
+|---------|---------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
+| Passive | Use energy that is available in the environment - in most cases, this is reflected energy from the sun. | Most common form of remote sensor, includes Landsat, SENTINEL |
+| Active  | Emit an energy source and then detect the reflection of this energy from the remote surface.            | RADAR, LiDAR, SAR                                             |
 
 In addition to the two types of remote sensing data, the data itself can be broken up into four metadata attributes:
 
@@ -78,7 +75,7 @@ This week's practical task involved downloading Sentinel data and Landsat data t
 
 The tasseled-cap transformation is an extension of SVIs, first developed by Kauth and Thomas [-@kauthTasselledCapGraphic1976], that is intended to capture spectral characteristics of soil, as opposed to just vegetation. It has been iteratively improved over time following improvements in the quality and availability of Landsat data, and is now commonly derived using three indices: *Brightness, Greenness* and *Wetness* [@cohenLandsatRoleEcological2004; @cristPhysicallybasedTransformationThematic1984].
 
-![An example of the tasseled-cap transformation indices. Source: \[\@cohenLandsatRoleEcological2004\] ](img/cohen-2004-tasseledcap.png)
+![An example of the tasseled-cap transformation indices. Source: \[\@cohenLandsatRoleEcological2004\]](img/cohen-2004-tasseledcap.png)
 
 Tasseled-cap transformation continues to be used in ecological applications, such as classifying forest structure [e.g., @dymondPhenologicalDifferencesTasseled2002] or tree species [@fassnachtReviewStudiesTree2016, but has also been applied in urban land classification research - for example, in analysis of urban green space and soil characteristics [@riddComparisonFourAlgorithms1998].
 

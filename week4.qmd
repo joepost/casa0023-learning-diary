@@ -4,7 +4,25 @@ title: "Case Study: Athens"
 
 ## Summary
 
-\[Discuss Policy applications of remote sensing data in Athens, specifically focusing on the Urban Heat Island effect, and wildfire monitoring\]
+How can remote sensing data be applied to help achieve policy goals?
+
+{{< video https://www.youtube.com/watch?v=WaKrPDso808&ab_channel=TED >}}
+
+-   Athens Heatwave Action Plan launched in 2016
+
+-   Appointed a Chief Heat Officer in 2021, tasked with reducing the impacts of extreme heat waves in the Greek capital, and improving resilience to the urban heat island (UHI) effect
+
+-   Policy goals: increasing green areas, expanding the use of cool materials, increasing shade options, and promoting "cooling routes" in parts of the city where the urban heat island effect is more intense.
+
+-   Under a strategic partnership between the city and the National Observatory of Athens, a digital heatwave warning mechanism created to alert residents via personal computers or smartphones. The mechanism provides the current temperature in the user's location, whether or not they are at risk depending on their age and medical condition, as well as how to reach a cooling spot in case they are at risk
+
+Statements from CHO:
+
+> "The first and most important goal is to make the city greener and to create an infrastructure that would bring more nature and water into the city ... We need to increase the number of parks in Athens that already provide shelter to vulnerable residents. Parks can help a great deal to bring down temperatures in the city; they absorb CO2 emission and retain water, they increase biodiversity, create oxygen, clean the air from microparticles so they also help to fight pollution." [Eurocities News](https://eurocities.eu/latest/athens-heat-warrior/)
+
+"The second solution will be carried out in the short-term. The plan is to give wider access to air conditioning to the most vulnerable groups and help them to lower temperatures in their homes during heatwaves. Air conditioning will play a role in this case. We know it increases outdoor heat and CO2 emissions, but it will be necessary to protect people from getting sick or dying."
+
+"Together with meteorologists and climate scientists, we are considering naming heatwaves and categorising them like hurricanes. This will make events more prominent in people's minds, turning weather phenomena into an entity. People are able to think of an event more clearly if they can call it by a name and media can more easily communicate it to their audiences. Categorising heatwaves will help authorities to set up risk management protocols."
 
 ## Application
 
