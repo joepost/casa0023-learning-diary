@@ -34,18 +34,30 @@ Source: [@horowitzAthensOnlyGetting2021]
 
 Concurrently, the City of Athens has also developed a [Climate Change Action Plan](https://www.cityofathens.gr/poio-einai-to-schedio-drasis-tis-athinas/ "Note: this page is in Greek") which feeds into much of the work of the Chief Heat Officer, and includes goals to transition 30% of the city surface to vegetation and/or permeable surfaces by 2030, and in the same time frame ensure that 70% of the city's populations has access to green space within a 15 minute walk.
 
-These goals are reflected in both the regional and global context. Athens is prominently involved in European Union initiatives for urban resilience as a signatory to the European Commission's [Covenant of Mayors for Climate and Energy](https://eu-mayors.ec.europa.eu/en/home). In a broader sense, explicitly addressing climate change as an impact on health and livelihoods aligns with the United Nation's Sustainable Development Goals - a high-level framework for directing global patterns of development and resilience. This includes:
-
--   Goal 3: Good Health and Wellbeing,
-
--   Goal 11: Sustainable Cities and Communities, and
-
--   Goal 13: Climate Action
+These goals are reflected in both the regional and global context. Athens is prominently involved in European Union initiatives for urban resilience as a signatory to the European Commission's [Covenant of Mayors for Climate and Energy](https://eu-mayors.ec.europa.eu/en/home). In a broader sense, addressing climate change as an impact on health and livelihoods aligns with the United Nation's Sustainable Development Goals, a high-level framework for directing global patterns of development and resilience [@unitednationsSustainableDevelopmentGoals2022], and the UN Environment Program's (UNEP) *Beat the Heat* report, a sustainable cooling handbook for cities [@unitednationsenvironmentprogramBeatingHeatSustainable2021].
 
 ## Application
 
-Text
+Potential applications for remote sensing data have been broken down into the three main strategies outlined by Myrivili above: (1) Increase urban greening, (2) provide relief to the most vulnerable, and (3) improve risk communication.
+
+### Increase urban greening
+
+Using remote sensing data to monitor vegetation and land cover in urban areas is well-established, and there is a depth of scientific literature to demonstrate this [for example, @zhaUseNormalizedDifference2003; @wuEstimatingImperviousSurface2003]. Through automated classification of surface land use/land cover (LULC) using remote sensing, the city of Athens could directly measure progress towards the goal of 30% land cover being vegetation or permeable surfaces by 2030. Yuan et al. [-@yuanComparisonImperviousSurface2007] demonstrate that freely available Landsat imagery would generally provide a sufficient data source for this task.
+
+### Provide relief to the most vulnerable
+
+Including a dimension of vulnerability into risk measurement suggests the need for data fusion - combining remote sensing data of LULC and surface temperature with spatial socioeconomic data, collected through a population census, government administrative datasets, or research surveys. Johnson et al. [-@johnsonDevelopingAppliedExtreme2012] showed that calculating an extreme heat vulnerability index (EHVI) consisting of census data and remotely sensed imagery was able to explain nearly 80% of the variance in heat-health vulnerability when applied to a heatwave event in Chicago, and accurately captured a trend of higher death rates in high risk zones and lower death rates in low risk zones. A similar approach has been applied by researchers in Birmingham, UK [@tomlinsonIncludingUrbanHeat2011] to identify the spatial distribution of heat vulnerability.
+
+![Flowchart of incorporating remote sensing hazard data with sociodemographic vulnerability, from Tomlinson *et al.* (2011)](img/tomlinson-2011-flowchart.png){fig-align="center"}
+
+![Vulnerability risk map of Birmingham, from Tomlinson *et al.* (2011)](img/tomlinson-2011-birmingham-map3.png)
+
+In Athens, these approaches could be used to provide an evidence basis for policy intervention, identifying areas of greatest need for rapid intervention such as installing air conditioning or creating public "cool zones", and providing subsidies for energy use to address pockets of energy poverty.
+
+### Improve risk communication
+
+As mentioned in the quote and video above ([The Policy Context]), the City of Athens has proposed naming and categorising heatwave events, in an attempt to improve public awareness of severity and the associated risk. The city has already put this proposal into action, working with the National Observatory of Athens to incorporate meteorological remote sensing data into a digital warning mechanism, that will warn user's smartphones on heatwaves, factors of risk, and nearby cool zones [@horowitzAthensOnlyGetting2021].
 
 ## Reflection
 
-Text
+Athens provides an interesting case study, as a city that has already taken demonstrable steps towards heat mitigation and a very public awareness campaign through the posting of the Chief Heat Officer. It combines both the high-level rhetoric of sustainability and resilience, which have near universal adoption through initiatives such as the UN Sustainable Development Goals, with concrete policy actions, which are much rarer. In particular, the existing partnership with the National Observatory of Athens highlights that the metropolitan government are already bridging the gap between research and action.
