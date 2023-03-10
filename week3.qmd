@@ -4,7 +4,21 @@ title: "Image Corrections"
 
 ## Summary {#sec-week3summary}
 
-This section will cover corrections of remote sensing data, to account for atmospheric noise, shadow and distortion, and other processes affecting the raw output.
+This section will cover corrections applied to remote sensing data, to account for atmospheric noise, shadow and distortion, and other processes affecting the raw output. In practice, corrections will most often be dealt with by the image provider - where data is made available 'analysis ready'. Search source metadata for details on which corrections have been applied, and the calculations used.
+
+### Types of Correction
+
+| Type                                                                                           | Description                                                                                                                                                                                                                                                                  | Examples                                                                                                                                                                                          |
+|------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Geometric Correction (includes Orthorectification, or Topographic Correction) **\*CHECK THIS** | Accounts for differences in sensor view angles. Corrections will use methods such as ground control points, where known points are identified in both images. See figure below.                                                                                              | Making the images taken straight down ("*nadir*") comparable to images from off-centre ("*off-nadir*")                                                                                            |
+| Atmospheric Correction                                                                         | Accounts for the 'haze' caused by atmospheric scattering and absorption.                                                                                                                                                                                                     | Using Dark Object Subtraction (DOS) to quantify the difference between surface reflectance and top-of-atmosphere (TOA) reflectance.                                                               |
+| Resampling                                                                                     | Accounts for difference in spatial resolution of raster images. Resampling is used to calculate values for 'lower' resolution pixels calculated from the component higher resolution pixels.                                                                                 | Used to resample Landsat bands taken at 10m resolution into lower resolution 20m pixels, to allow band math with other bands recorded at 20m resolution. \[SPECIFY THE BANDS AT 20; FROM PRAC 1\] |
+| Radiometric Calibration                                                                        | Accounts for the conversion of unitless data collected by the sensor (a 'Digital Number') to a value indicating the spectral radiance.                                                                                                                                       | The transition from *Digital Number* to *Radiance* to *Reflectance* represents different values corresponding to increasing levels of correction/processing.                                      |
+| Point Spread Functions                                                                         | Accounts for the spread of reflectance values that contribute to a single pixel. The centre of a pixel will have the greatest influence on the observed reflectance; point spread functions calculate the influence of pixel sections as distance increases from the centre. |                                                                                                                                                                                                   |
+
+Using ground control points in geometric correction:
+
+\[INSERT IMAGE FROM NOTION\]
 
 ## Application {#sec-week3application}
 
@@ -13,3 +27,9 @@ Text
 ## Reflection {#sec-week3reflection}
 
 Text
+
+Try and summarise in what situations corrections would be needed (e.g. will I always be able to download pre-processed data anyway? When would one need to proceed with corrections calculations)
+
+Explore some methods for mosaicking?
+
+Reflection: discuss how different correction methods can be applied, and how this can affect the interpretation and outcome (reference findings from Detoni *et al.* 2023); links back to the idea of remote sensing as science + art

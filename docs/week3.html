@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.251">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -132,7 +132,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#sec-week3summary" id="toc-sec-week3summary" class="nav-link active" data-scroll-target="#sec-week3summary"><span class="toc-section-number">3.1</span>  Summary</a></li>
+  <li><a href="#sec-week3summary" id="toc-sec-week3summary" class="nav-link active" data-scroll-target="#sec-week3summary"><span class="toc-section-number">3.1</span>  Summary</a>
+  <ul class="collapse">
+  <li><a href="#types-of-correction" id="toc-types-of-correction" class="nav-link" data-scroll-target="#types-of-correction"><span class="toc-section-number">3.1.1</span>  Types of Correction</a></li>
+  </ul></li>
   <li><a href="#sec-week3application" id="toc-sec-week3application" class="nav-link" data-scroll-target="#sec-week3application"><span class="toc-section-number">3.2</span>  Application</a></li>
   <li><a href="#sec-week3reflection" id="toc-sec-week3reflection" class="nav-link" data-scroll-target="#sec-week3reflection"><span class="toc-section-number">3.3</span>  Reflection</a></li>
   </ul>
@@ -151,6 +154,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
@@ -159,7 +163,53 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="sec-week3summary" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="sec-week3summary"><span class="header-section-number">3.1</span> Summary</h2>
-<p>This section will cover corrections of remote sensing data, to account for atmospheric noise, shadow and distortion, and other processes affecting the raw output.</p>
+<p>This section will cover corrections applied to remote sensing data, to account for atmospheric noise, shadow and distortion, and other processes affecting the raw output. In practice, corrections will most often be dealt with by the image provider - where data is made available ‘analysis ready’. Search source metadata for details on which corrections have been applied, and the calculations used.</p>
+<section id="types-of-correction" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="types-of-correction"><span class="header-section-number">3.1.1</span> Types of Correction</h3>
+<table class="table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 48%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Description</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Geometric Correction (includes Orthorectification, or Topographic Correction) <strong>*CHECK THIS</strong></td>
+<td>Accounts for differences in sensor view angles. Corrections will use methods such as ground control points, where known points are identified in both images. See figure below.</td>
+<td>Making the images taken straight down (“<em>nadir</em>”) comparable to images from off-centre (“<em>off-nadir</em>”)</td>
+</tr>
+<tr class="even">
+<td>Atmospheric Correction</td>
+<td>Accounts for the ‘haze’ caused by atmospheric scattering and absorption.</td>
+<td>Using Dark Object Subtraction (DOS) to quantify the difference between surface reflectance and top-of-atmosphere (TOA) reflectance.</td>
+</tr>
+<tr class="odd">
+<td>Resampling</td>
+<td>Accounts for difference in spatial resolution of raster images. Resampling is used to calculate values for ‘lower’ resolution pixels calculated from the component higher resolution pixels.</td>
+<td>Used to resample Landsat bands taken at 10m resolution into lower resolution 20m pixels, to allow band math with other bands recorded at 20m resolution. [SPECIFY THE BANDS AT 20; FROM PRAC 1]</td>
+</tr>
+<tr class="even">
+<td>Radiometric Calibration</td>
+<td>Accounts for the conversion of unitless data collected by the sensor (a ‘Digital Number’) to a value indicating the spectral radiance.</td>
+<td>The transition from <em>Digital Number</em> to <em>Radiance</em> to <em>Reflectance</em> represents different values corresponding to increasing levels of correction/processing.</td>
+</tr>
+<tr class="odd">
+<td>Point Spread Functions</td>
+<td>Accounts for the spread of reflectance values that contribute to a single pixel. The centre of a pixel will have the greatest influence on the observed reflectance; point spread functions calculate the influence of pixel sections as distance increases from the centre.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Using ground control points in geometric correction:</p>
+<p>[INSERT IMAGE FROM NOTION]</p>
+</section>
 </section>
 <section id="sec-week3application" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="sec-week3application"><span class="header-section-number">3.2</span> Application</h2>
@@ -168,6 +218,9 @@ ul.task-list li input[type="checkbox"] {
 <section id="sec-week3reflection" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="sec-week3reflection"><span class="header-section-number">3.3</span> Reflection</h2>
 <p>Text</p>
+<p>Try and summarise in what situations corrections would be needed (e.g.&nbsp;will I always be able to download pre-processed data anyway? When would one need to proceed with corrections calculations)</p>
+<p>Explore some methods for mosaicking?</p>
+<p>Reflection: discuss how different correction methods can be applied, and how this can affect the interpretation and outcome (reference findings from Detoni <em>et al.</em> 2023); links back to the idea of remote sensing as science + art</p>
 
 
 </section>
@@ -214,7 +267,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -250,24 +320,42 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>

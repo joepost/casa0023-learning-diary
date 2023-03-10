@@ -1,0 +1,39 @@
+---
+title: "Google Earth Engine"
+---
+
+## Summary {#sec-week5summary}
+
+**What is Google Earth Engine (GEE)?**
+
+Earth Engine is a cloud-based application designed for the analysis and exploration of remote sensing data. It provides access to powerful supercomputing resources and an extensive database of freely available remote sensing data, from a variety of sources and sensors. The data in Earth Engine is preprocessed and analysis-ready, and the catalogue is continuously updated with data becoming available on average within 24 hours of acquisition [@gorelickGoogleEarthEngine2017].
+
+**How does it work?**
+
+Analysis is divided between a client side - the Earth Engine browser interface - and the server side, where the data is stored and the processing is performed.
+
+Due to the huge volume of data that can be involved in Earth Engine calculations and visualisations, the system also uses different methods to reduce data load/computing time:
+
+::: panel-tabset
+## Pyramid Scaling
+
+In Earth Engine, the spatial resolution is determined by the output, not the input. The system stores a 'pyramid' of progressively reduced resolution tiles, which adjust depending on the scale of the user's view. The smaller (reduced resolution) layers of the pyramid are calculated through a down-sampling method, such as the *mean* for numeric data, or the *mode* for classification data.
+
+## Lazy Computation
+
+'Lazy' computation refers to the process of only computing the data that are necessary, such as that in the user's current view (if using an interactive display). The window's zoom level and bounds will dynamically control the projection and resolution of the computed data.
+
+## Distributed Computing
+
+The Earth Engine code library provides a suite of inbuilt functions that are designed to maximise performance on the cloud-based computing system. Methods such as parallelisation and distributed computing break down larger jobs to be run across many smaller machines, allowing faster times to produce client output.
+:::
+
+Source: Gorelick et al. [-@gorelickGoogleEarthEngine2017]
+
+## Application {#sec-week5application}
+
+Text
+
+## Reflection {#sec-week5reflection}
+
+Text
