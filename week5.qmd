@@ -32,7 +32,13 @@ Source: Gorelick et al. [-@gorelickGoogleEarthEngine2017]
 
 ## Application {#sec-week5application}
 
-Text
+**Building a remote sensing machine learning pipeline using Earth Engine**
+
+Sulova and Jokar Arsanjani [-@sulovaExploratoryAnalysisDriving2021] incorporated Earth Engine data into a machine learning pipeline, for the analysis of drivers of wildfire in Australia. This study is interesting because it outlines the full workflow of an open source remote sensing analysis, from the collection and processing of freely available data in Earth Engine to then become an input into a series of machine learning models (random forest, naive bayes, and a classification and regression tree) to identify the most effective. The output of the study is an automated workflow for developing large, labelled training datasets using Earth Engine to be applied in supervised machine learning.
+
+In the flowchart below, Earth Engine is used for the extraction and analysis of Sentinel-2, FIRMS, DEM, NDVI and other satellite image collections, in the pre-processing stage.
+
+![](img/sulova-2021-figure6.png){fig-align="left"}
 
 ## Reflection {#sec-week5reflection}
 

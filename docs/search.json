@@ -144,13 +144,13 @@
     "href": "week5.html#sec-week5application",
     "title": "5  Google Earth Engine",
     "section": "5.2 Application",
-    "text": "5.2 Application\nText"
+    "text": "5.2 Application\nBuilding a remote sensing machine learning pipeline using Earth Engine\nSulova and Jokar Arsanjani (2021) incorporated Earth Engine data into a machine learning pipeline, for the analysis of drivers of wildfire in Australia. This study is interesting because it outlines the full workflow of an open source remote sensing analysis, from the collection and processing of freely available data in Earth Engine to then become an input into a series of machine learning models (random forest, naive bayes, and a classification and regression tree) to identify the most effective. The output of the study is an automated workflow for developing large, labelled training datasets using Earth Engine to be applied in supervised machine learning.\nIn the flowchart below, Earth Engine is used for the extraction and analysis of Sentinel-2, FIRMS, DEM, NDVI and other satellite image collections, in the pre-processing stage."
   },
   {
     "objectID": "week5.html#sec-week5reflection",
     "href": "week5.html#sec-week5reflection",
     "title": "5  Google Earth Engine",
     "section": "5.3 Reflection",
-    "text": "5.3 Reflection\nText\n\n\n\n\nGorelick, Noel, Matt Hancher, Mike Dixon, Simon Ilyushchenko, David Thau, and Rebecca Moore. 2017. “Google Earth Engine: Planetary-scale Geospatial Analysis for Everyone.” Remote Sensing of Environment, Big Remotely Sensed Data: Tools, applications and experiences, 202 (December): 18–27. https://doi.org/10.1016/j.rse.2017.06.031."
+    "text": "5.3 Reflection\nText\n\n\n\n\nGorelick, Noel, Matt Hancher, Mike Dixon, Simon Ilyushchenko, David Thau, and Rebecca Moore. 2017. “Google Earth Engine: Planetary-scale Geospatial Analysis for Everyone.” Remote Sensing of Environment, Big Remotely Sensed Data: Tools, applications and experiences, 202 (December): 18–27. https://doi.org/10.1016/j.rse.2017.06.031.\n\n\nSulova, Andrea, and Jamal Jokar Arsanjani. 2021. “Exploratory Analysis of Driving Force of Wildfires in Australia: An Application of Machine Learning Within Google Earth Engine.” Remote Sensing 13 (1, 1): 10. https://doi.org/10.3390/rs13010010."
   }
 ]
