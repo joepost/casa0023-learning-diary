@@ -265,9 +265,9 @@ Note
 <h3 data-number="1.1.2" class="anchored" data-anchor-id="types-of-remote-sensing"><span class="header-section-number">1.1.2</span> Types of remote sensing</h3>
 <table class="table">
 <colgroup>
-<col style="width: 5%">
-<col style="width: 59%">
-<col style="width: 35%">
+<col style="width: 7%">
+<col style="width: 57%">
+<col style="width: 34%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -308,23 +308,31 @@ Note
 <p></p><figcaption class="figure-caption">An example of the tasseled-cap transformation indices. Source: [@cohenLandsatRoleEcological2004]</figcaption><p></p>
 </figure>
 </div>
-<p>Tasseled-cap transformation continues to be used in ecological applications, such as classifying forest structure <span class="citation" data-cites="dymondPhenologicalDifferencesTasseled2002">(e.g., <a href="references.html#ref-dymondPhenologicalDifferencesTasseled2002" role="doc-biblioref">Dymond, Mladenoff, and Radeloff 2002</a>)</span> or tree species [<span class="citation" data-cites="fassnachtReviewStudiesTree2016">Fassnacht et al. (<a href="references.html#ref-fassnachtReviewStudiesTree2016" role="doc-biblioref">2016</a>)</span>, but has also been applied in urban land classification research - for example, in analysis of urban green space and soil characteristics <span class="citation" data-cites="riddComparisonFourAlgorithms1998">(<a href="references.html#ref-riddComparisonFourAlgorithms1998" role="doc-biblioref">Ridd and Liu 1998</a>)</span>.</p>
+<p>Tasseled-cap transformation continues to be used in ecological applications, such as classifying forest structure <span class="citation" data-cites="dymondPhenologicalDifferencesTasseled2002">(e.g., <a href="references.html#ref-dymondPhenologicalDifferencesTasseled2002" role="doc-biblioref">Dymond, Mladenoff, and Radeloff 2002</a>)</span> or tree species <span class="citation" data-cites="fassnachtReviewStudiesTree2016">(<a href="references.html#ref-fassnachtReviewStudiesTree2016" role="doc-biblioref">Fassnacht et al. 2016</a>)</span>, but has also been applied in urban land classification research - for example, in analysis of urban green space and soil characteristics <span class="citation" data-cites="riddComparisonFourAlgorithms1998">(<a href="references.html#ref-riddComparisonFourAlgorithms1998" role="doc-biblioref">Ridd and Liu 1998</a>)</span>.</p>
 </section>
 <section id="reflection" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">1.3</span> Reflection</h2>
 <p>In this introduction week, the topics that stood out to me were the ingenuity of the technical aspects, bridging the gap between the physics of electromagnetic radiation and applying this knowledge to produce very powerful and informative datasets. These aspects include the mechanics behind a sensor’s spectral resolution, the translation of images into distributions of pixel values, and the additional considerations of using an active sensor.</p>
-<p><strong>Spectral Resolution</strong></p>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Spectral Resolution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Pixel Distributions</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Active Sensors</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <p>When reading about a sensor, the band range will often be specified - e.g., a sensor may be described to observe the area of the electromagnetic spectrum between 525 - 605 nm (<em>nanometres</em> being a measure of the wavelength). However (and this is quite intuitive when you stop to think about it), the sensor does not actually have such a discrete cut-off at these wavelengths. Detectors are actually sensitive to a region of the EMS, where the maximum sensitivity is at the middle spot of this region, with sensitivity declining as it moves away from this point. The stated range given for sensors uses the Full Width at Half Maximum (FWHM) criteria, which is the range of wavelengths detected at 50% or greater intensity, as shown in the figure below, from <span class="citation" data-cites="jensenIntroductoryDigitalImage2015">(<a href="references.html#ref-jensenIntroductoryDigitalImage2015" role="doc-biblioref">Jensen 2015</a>)</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/jensen-2015-spectral-bandwidth.png" class="img-fluid figure-img"></p>
+<p><img src="img/jensen-2015-spectral-bandwidth.png" class="img-fluid figure-img" alt="Defining spectral resolution using the Full Width at Half Maximum Criteria"></p>
 <p></p><figcaption class="figure-caption">Defining spectral resolution using the Full Width at Half Maximum Criteria</figcaption><p></p>
 </figure>
 </div>
-<p><strong>Pixel Distributions</strong></p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <p>I found conceptualising a remote sensing image as a simple distribution of pixel values a very powerful way to think about how the data can be analysed, understood, and transformed. A practical example of this is the use of histograms to ‘stretch’ the colours in an image, to improve differentiation and visual interpretation. The histogram of pixel values will commonly follow an approximately normal distribution, but a colour gradient will run linearly from the minimum to the maximum value of the dataset, which will result in a much ‘shallower’ gradient. Different methods can be used to rectify this, such as stretching or clipping to min/max.</p>
-<p><strong>Impacts of active sensors</strong></p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
 <p>Jensen et al. <span class="citation" data-cites="jensenIntroductoryDigitalImage2015">(<a href="references.html#ref-jensenIntroductoryDigitalImage2015" role="doc-biblioref">Jensen 2015</a>)</span> warn that “powerful active remote sensor systems that emit their own electromagnetic radiation (e.g., LiDAR, RADAR, SONAR) can be intrusive and affect the phenomenon being investigated. Additional research is required to determine how intrusive these active sensors can be.” (p.8). I would be interested to investigate further what kind of research has been done in this area, or what kind of impacts active sensing methods are hypothesised to have. In which situation would the process of using an active sensor disturb the process being observed?</p>
+</div>
+</div>
+</div>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">

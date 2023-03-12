@@ -30,6 +30,14 @@ The Earth Engine code library provides a suite of inbuilt functions that are des
 
 Source: Gorelick et al. [-@gorelickGoogleEarthEngine2017]
 
+**What data can I find?**
+
+Earth Engine holds a broad data catalogue, which can be accessed here: <https://developers.google.com/earth-engine/datasets>.
+
+Gorelick et al. [-@gorelickGoogleEarthEngine2017] also provide a useful summary table of key satellites and datasets.
+
+![](img/gorelick2017-eecatalog.png)
+
 ## Application {#sec-week5application}
 
 **Building a remote sensing machine learning pipeline using Earth Engine**
@@ -39,6 +47,12 @@ Sulova and Jokar Arsanjani [-@sulovaExploratoryAnalysisDriving2021] incorporated
 In the flowchart below, Earth Engine is used for the extraction and analysis of Sentinel-2, FIRMS, DEM, NDVI and other satellite image collections, in the pre-processing stage.
 
 ![](img/sulova-2021-figure6.png){fig-align="left"}
+
+**Finer scale malaria mapping in low transmission settings**
+
+Sturrock et al. [-@sturrockFinescaleMalariaRisk2014] have used remote sensing data from Earth Engine in conjunction with routine malaria case data from health facilities to map malaria risk in Eswatini (Swaziland). The researchers used a suite of remotely sensed ecological/environmental covariates, including enhanced vegetation index (EVI), normalised difference water index (NDWI), and normalised difference vegetation index (NDVI), captured by MODIS and sourced from Earth Engine. All covariates were resampled to a 1km resolution and then fed into a hierarchical modelling framework.
+
+The study is intended as a proof-of-concept for implementing the methodology in diverse settings. Utilising Earth Engine for the remote sensing aspect means the method can be freely and relatively easily replicated, especially in potentially resource-limited settings.
 
 ## Reflection {#sec-week5reflection}
 
