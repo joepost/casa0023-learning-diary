@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CASA0023 Weekly Learning Diary - 3&nbsp; Image Corrections</title>
+<title>CASA0023 Weekly Learning Diary - 7&nbsp; Classification II: Accuracy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./week4.html" rel="next">
-<link href="./week2.html" rel="prev">
+<link href="./week8.html" rel="next">
+<link href="./week6.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -70,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Image Corrections</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II: Accuracy</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -110,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week3.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Image Corrections</span></a>
+  <a href="./week3.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Image Corrections</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -130,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week7.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II: Accuracy</span></a>
+  <a href="./week7.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II: Accuracy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -152,12 +152,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#sec-week3summary" id="toc-sec-week3summary" class="nav-link active" data-scroll-target="#sec-week3summary"><span class="toc-section-number">3.1</span>  Summary</a>
-  <ul class="collapse">
-  <li><a href="#types-of-correction" id="toc-types-of-correction" class="nav-link" data-scroll-target="#types-of-correction"><span class="toc-section-number">3.1.1</span>  Types of Correction</a></li>
-  </ul></li>
-  <li><a href="#sec-week3application" id="toc-sec-week3application" class="nav-link" data-scroll-target="#sec-week3application"><span class="toc-section-number">3.2</span>  Application</a></li>
-  <li><a href="#sec-week3reflection" id="toc-sec-week3reflection" class="nav-link" data-scroll-target="#sec-week3reflection"><span class="toc-section-number">3.3</span>  Reflection</a></li>
+  <li><a href="#sec-week7summary" id="toc-sec-week7summary" class="nav-link active" data-scroll-target="#sec-week7summary"><span class="toc-section-number">7.1</span>  Summary</a></li>
+  <li><a href="#sec-week7application" id="toc-sec-week7application" class="nav-link" data-scroll-target="#sec-week7application"><span class="toc-section-number">7.2</span>  Application</a></li>
+  <li><a href="#sec-week7reflection" id="toc-sec-week7reflection" class="nav-link" data-scroll-target="#sec-week7reflection"><span class="toc-section-number">7.3</span>  Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -166,7 +163,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Image Corrections</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II: Accuracy</span></h1>
 </div>
 
 
@@ -181,66 +178,14 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="sec-week3summary" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="sec-week3summary"><span class="header-section-number">3.1</span> Summary</h2>
-<p>This section will cover corrections applied to remote sensing data, to account for atmospheric noise, shadow and distortion, and other processes affecting the raw output. In practice, corrections will most often be dealt with by the image provider - where data is made available ‘analysis ready’. Search source metadata for details on which corrections have been applied, and the calculations used.</p>
-<section id="types-of-correction" class="level3" data-number="3.1.1">
-<h3 data-number="3.1.1" class="anchored" data-anchor-id="types-of-correction"><span class="header-section-number">3.1.1</span> Types of Correction</h3>
-<table class="table">
-<colgroup>
-<col style="width: 23%">
-<col style="width: 44%">
-<col style="width: 31%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Type</th>
-<th>Description</th>
-<th>Examples</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Geometric Correction (includes Orthorectification, or Topographic Correction) <strong>*CHECK THIS</strong></td>
-<td>Accounts for differences in sensor view angles. Corrections will use methods such as ground control points, where known points are identified in both images. See figure below.</td>
-<td>Making the images taken straight down (“<em>nadir</em>”) comparable to images from off-centre (“<em>off-nadir</em>”)</td>
-</tr>
-<tr class="even">
-<td>Atmospheric Correction</td>
-<td>Accounts for the ‘haze’ caused by atmospheric scattering and absorption.</td>
-<td>Using Dark Object Subtraction (DOS) to quantify the difference between surface reflectance and top-of-atmosphere (TOA) reflectance.</td>
-</tr>
-<tr class="odd">
-<td>Resampling</td>
-<td>Accounts for difference in spatial resolution of raster images. Resampling is used to calculate values for ‘lower’ resolution pixels calculated from the component higher resolution pixels.</td>
-<td>Used to resample Landsat bands taken at 10m resolution into lower resolution 20m pixels, to allow band math with other bands recorded at 20m resolution. [SPECIFY THE BANDS AT 20; FROM PRAC 1]</td>
-</tr>
-<tr class="even">
-<td>Radiometric Calibration</td>
-<td>Accounts for the conversion of unitless data collected by the sensor (a ‘Digital Number’) to a value indicating the spectral radiance.</td>
-<td>The transition from <em>Digital Number</em> to <em>Radiance</em> to <em>Reflectance</em> represents different values corresponding to increasing levels of correction/processing.</td>
-</tr>
-<tr class="odd">
-<td>Point Spread Functions</td>
-<td>Accounts for the spread of reflectance values that contribute to a single pixel. The centre of a pixel will have the greatest influence on the observed reflectance; point spread functions calculate the influence of pixel sections as distance increases from the centre.</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>Using ground control points in geometric correction:</p>
-<p>[INSERT IMAGE FROM NOTION]</p>
+<section id="sec-week7summary" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="sec-week7summary"><span class="header-section-number">7.1</span> Summary</h2>
 </section>
+<section id="sec-week7application" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="sec-week7application"><span class="header-section-number">7.2</span> Application</h2>
 </section>
-<section id="sec-week3application" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="sec-week3application"><span class="header-section-number">3.2</span> Application</h2>
-<p>Text</p>
-</section>
-<section id="sec-week3reflection" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="sec-week3reflection"><span class="header-section-number">3.3</span> Reflection</h2>
-<p>Text</p>
-<p>Try and summarise in what situations corrections would be needed (e.g.&nbsp;will I always be able to download pre-processed data anyway? When would one need to proceed with corrections calculations)</p>
-<p>Explore some methods for mosaicking?</p>
-<p>Reflection: discuss how different correction methods can be applied, and how this can affect the interpretation and outcome (reference findings from Detoni <em>et al.</em> 2023); links back to the idea of remote sensing as science + art</p>
+<section id="sec-week7reflection" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="sec-week7reflection"><span class="header-section-number">7.3</span> Reflection</h2>
 
 
 </section>
@@ -381,13 +326,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./week2.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Remote Sensor: The OCO-2</span></span>
+      <a href="./week6.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./week4.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Case Study: Athens</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./week8.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Urban Heat Island</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -1,0 +1,21 @@
+---
+title: "Urban Heat Island"
+---
+
+## Summary {#sec-week8summary}
+
+**What is the Urban Heat Island effect?**
+
+Phenomenon of comparatively higher temperatures (atmospheric and surface) in urban areas compared with surrounding rural areas. Caused by comparatively lower vegetation, an increase in dark and impervious surfaces, and density of energy/electricity expenditure (e.g. transport, air conditioning).
+
+**What is the impact?**
+
+Text
+
+**What can be done?**
+
+Text
+
+## Application {#sec-week8application}
+
+## Reflection {#sec-week8reflection}

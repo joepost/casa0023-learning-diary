@@ -151,6 +151,69 @@
     "href": "week5.html#sec-week5reflection",
     "title": "5  Google Earth Engine",
     "section": "5.3 Reflection",
-    "text": "5.3 Reflection\nOne of the key valuable lessons I found this week was an explanation of the Red-Blue-Green colour channels, and how they apply in Earth Engine (and remote sensing imagery in general). When displaying an image digitally, the three colour channels are combined in an additive colour system (based in light, as opposed to subtractive colour composition, which is the result of mixing pigments or dyes - the distinction between these was an initial point of confusion for me).\nBands, which contain the data from a remote sensor at a specific spectral range, can be combined in the colour channels in any order. The order specifies which colour channel is used to display the digital number (DN) of the pixel. If the DN in the first band is higher compared with the other two bands, the pixel will appear reddish. The image below breaks down how colours on a screen correlate to band values (Howarth 2021).\n\n\n\nSource: Howarth, 2021\n\n\n\n\n\n\nGorelick, Noel, Matt Hancher, Mike Dixon, Simon Ilyushchenko, David Thau, and Rebecca Moore. 2017. “Google Earth Engine: Planetary-scale Geospatial Analysis for Everyone.” Remote Sensing of Environment, Big Remotely Sensed Data: Tools, applications and experiences, 202 (December): 18–27. https://doi.org/10.1016/j.rse.2017.06.031.\n\n\nHowarth, Jeff. 2021. “Exploring Images.” In Cloud-Based Remote Sensing with Google Earth Engine, edited by Jeffrey A. Cardille, Nick Clinton, Morgan A. Crowley, and David Saah. https://www.eefabook.org/.\n\n\nSturrock, Hugh JW, Justin M. Cohen, Petr Keil, Andrew J. Tatem, Arnaud Le Menach, Nyasatu E. Ntshalintshali, Michelle S. Hsiang, and Roland D. Gosling. 2014. “Fine-Scale Malaria Risk Mapping from Routine Aggregated Case Data.” Malaria Journal 13 (1, 1): 1–9. https://doi.org/10.1186/1475-2875-13-421.\n\n\nSulova, Andrea, and Jamal Jokar Arsanjani. 2021. “Exploratory Analysis of Driving Force of Wildfires in Australia: An Application of Machine Learning Within Google Earth Engine.” Remote Sensing 13 (1, 1): 10. https://doi.org/10.3390/rs13010010."
+    "text": "5.3 Reflection\nOne of the key valuable lessons I found this week was an explanation of the Red-Blue-Green colour channels, and how they apply in Earth Engine (and remote sensing imagery in general), from the Howarth (2021) reading. When displaying an image digitally, the three colour channels are combined in an additive colour system (based in light, as opposed to subtractive colour composition, which is the result of mixing pigments or dyes - the distinction between these was an initial point of confusion for me).\nBands, which contain the data from a remote sensor at a specific spectral range, can be combined in the colour channels in any order. The order specifies which colour channel is used to display the digital number (DN) of the pixel. If the DN in the first band is higher compared with the other two bands, the pixel will appear reddish. I found this explanation made it much clearer for me when interpreting composite images. The diagram below breaks down how colours on a screen correlate to certain band value combinations (Howarth 2021).\n\n\n\nSource: Howarth, 2021\n\n\n\n\n\n\nGorelick, Noel, Matt Hancher, Mike Dixon, Simon Ilyushchenko, David Thau, and Rebecca Moore. 2017. “Google Earth Engine: Planetary-scale Geospatial Analysis for Everyone.” Remote Sensing of Environment, Big Remotely Sensed Data: Tools, applications and experiences, 202 (December): 18–27. https://doi.org/10.1016/j.rse.2017.06.031.\n\n\nHowarth, Jeff. 2021. “Exploring Images.” In Cloud-Based Remote Sensing with Google Earth Engine, edited by Jeffrey A. Cardille, Nick Clinton, Morgan A. Crowley, and David Saah. https://www.eefabook.org/.\n\n\nSturrock, Hugh JW, Justin M. Cohen, Petr Keil, Andrew J. Tatem, Arnaud Le Menach, Nyasatu E. Ntshalintshali, Michelle S. Hsiang, and Roland D. Gosling. 2014. “Fine-Scale Malaria Risk Mapping from Routine Aggregated Case Data.” Malaria Journal 13 (1, 1): 1–9. https://doi.org/10.1186/1475-2875-13-421.\n\n\nSulova, Andrea, and Jamal Jokar Arsanjani. 2021. “Exploratory Analysis of Driving Force of Wildfires in Australia: An Application of Machine Learning Within Google Earth Engine.” Remote Sensing 13 (1, 1): 10. https://doi.org/10.3390/rs13010010."
+  },
+  {
+    "objectID": "week6.html#sec-week6summary",
+    "href": "week6.html#sec-week6summary",
+    "title": "6  Classification",
+    "section": "6.1 Summary",
+    "text": "6.1 Summary\nWhat is image classification?\nThe purpose of classification is to transform an raster of remote sensing spectral data into a meaningful set of categories, to aid interpretation and useability. A common example is the development of land use/land cover (LULC) maps, which distinguish between features such as water, vegetation, bare soil, and built environment.\nHow does it work?\nImage classification methods can be broken down into three broad types, summarised in the table below.\n\n\n\n\n\n\n\n\nMethod\nExample\nDetails\n\n\n\n\nUnsupervised (pixel-based)\nK-means clustering; ISODATA\nAlgorithm groups pixels into a specified number of clusters, which must then be manually classified based on their features.\n\n\nSupervised (pixel-based)\nMaximum likelihood, Minimum distance, Principal components analysis (PCA), Support vector machine (SVM)\nInvolves training and testing sets. Train the model on data labelled with desired categories, and then apply the model to a new image/dataset to classify.\n\n\nObject identification\nObject based image analysis (OBIA)\nAs opposed to pixel-based, seeks to combine groups of pixels into discrete objects. My involve input statistics such as shape, texture, context, and spectral signature. At high spatial resolutions, OBIA generally outperforms pixel-based classification, as it accounts for both spectral and contextual information.\n\n\n\nIt is also possible to define between a hard or fuzzy logic for per-pixel classification. Hard classification produces singular, discrete values for each pixel (e.g. a pixel that contains a combination of forest and water will be classified solely as one or the other, depending on the method). Fuzzy classification is an attempt to better represent the heterogeneous nature of the real-world being observed. Instead of being assigned to a single discrete class, each pixel is given an estimate of the proportion of each land-cover type found within it (e.g. 20% water, 70% forest, 10% scrub/grassland) (Jensen 2015 , Ch.9). The concept of fuzzy classification and sub-pixel analysis is discussed further in Chapter 7."
+  },
+  {
+    "objectID": "week6.html#sec-week6application",
+    "href": "week6.html#sec-week6application",
+    "title": "6  Classification",
+    "section": "6.2 Application",
+    "text": "6.2 Application"
+  },
+  {
+    "objectID": "week6.html#sec-week6reflection",
+    "href": "week6.html#sec-week6reflection",
+    "title": "6  Classification",
+    "section": "6.3 Reflection",
+    "text": "6.3 Reflection\n\n\n\n\nJensen, John R. 2015. Introductory Digital Image Processing: A Remote Sensing Perspective. 4th ed. Prentice-Hall Inc."
+  },
+  {
+    "objectID": "week7.html#sec-week7summary",
+    "href": "week7.html#sec-week7summary",
+    "title": "7  Classification II: Accuracy",
+    "section": "7.1 Summary",
+    "text": "7.1 Summary"
+  },
+  {
+    "objectID": "week7.html#sec-week7application",
+    "href": "week7.html#sec-week7application",
+    "title": "7  Classification II: Accuracy",
+    "section": "7.2 Application",
+    "text": "7.2 Application"
+  },
+  {
+    "objectID": "week7.html#sec-week7reflection",
+    "href": "week7.html#sec-week7reflection",
+    "title": "7  Classification II: Accuracy",
+    "section": "7.3 Reflection",
+    "text": "7.3 Reflection"
+  },
+  {
+    "objectID": "week8.html#sec-week8summary",
+    "href": "week8.html#sec-week8summary",
+    "title": "8  Urban Heat Island",
+    "section": "8.1 Summary",
+    "text": "8.1 Summary\nWhat is the Urban Heat Island effect?\nPhenomenon of comparatively higher temperatures (atmospheric and surface) in urban areas compared with surrounding rural areas. Caused by comparatively lower vegetation, an increase in dark and impervious surfaces, and density of energy/electricity expenditure (e.g. transport, air conditioning).\nWhat is the impact?\nText\nWhat can be done?\nText"
+  },
+  {
+    "objectID": "week8.html#sec-week8application",
+    "href": "week8.html#sec-week8application",
+    "title": "8  Urban Heat Island",
+    "section": "8.2 Application",
+    "text": "8.2 Application"
+  },
+  {
+    "objectID": "week8.html#sec-week8reflection",
+    "href": "week8.html#sec-week8reflection",
+    "title": "8  Urban Heat Island",
+    "section": "8.3 Reflection",
+    "text": "8.3 Reflection"
   }
 ]

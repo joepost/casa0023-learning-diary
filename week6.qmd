@@ -1,0 +1,25 @@
+---
+title: "Classification"
+---
+
+## Summary {#sec-week6summary}
+
+**What is image classification?**
+
+The purpose of classification is to transform an raster of remote sensing spectral data into a meaningful set of categories, to aid interpretation and useability. A common example is the development of land use/land cover (LULC) maps, which distinguish between features such as water, vegetation, bare soil, and built environment.
+
+**How does it work?**
+
+Image classification methods can be broken down into three broad types, summarised in the table below.
+
+| Method                     | Example                                                                                                 | Details                                                                                                                                                                                                                                                                                                                    |
+|------------------------|------------------------|------------------------|
+| Unsupervised (pixel-based) | K-means clustering; ISODATA                                                                             | Algorithm groups pixels into a specified number of clusters, which must then be manually classified based on their features.                                                                                                                                                                                               |
+| Supervised (pixel-based)   | Maximum likelihood, Minimum distance, Principal components analysis (PCA), Support vector machine (SVM) | Involves training and testing sets. Train the model on data labelled with desired categories, and then apply the model to a new image/dataset to classify.                                                                                                                                                                 |
+| Object identification      | Object based image analysis (OBIA)                                                                      | As opposed to pixel-based, seeks to combine groups of pixels into discrete objects. My involve input statistics such as shape, texture, context, and spectral signature. At high spatial resolutions, OBIA generally outperforms pixel-based classification, as it accounts for both spectral and contextual information.  |
+
+It is also possible to define between a *hard* or *fuzzy* logic for per-pixel classification. Hard classification produces singular, discrete values for each pixel (e.g. a pixel that contains a combination of forest and water will be classified solely as one or the other, depending on the method). Fuzzy classification is an attempt to better represent the heterogeneous nature of the real-world being observed. Instead of being assigned to a single discrete class, each pixel is given an estimate of the proportion of each land-cover type found within it (e.g. 20% water, 70% forest, 10% scrub/grassland) [@jensenIntroductoryDigitalImage2015 , Ch.9]. The concept of fuzzy classification and sub-pixel analysis is discussed further in Chapter 7.
+
+## Application {#sec-week6application}
+
+## Reflection {#sec-week6reflection}
