@@ -80,6 +80,7 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -200,7 +201,7 @@ div.csl-indent {
 <section id="sec-week6summary" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="sec-week6summary"><span class="header-section-number">6.1</span> Summary</h2>
 <p><strong>What is image classification?</strong></p>
-<p>The purpose of classification is to transform an raster of remote sensing spectral data into a meaningful set of categories, to aid interpretation and useability. A common example is the development of land use/land cover (LULC) maps, which distinguish between features such as water, vegetation, bare soil, and built environment.</p>
+<p>The purpose of classification is to transform a raster of remote sensing spectral data into a meaningful set of categories, to aid interpretation and usability. A common example is the development of land use/land cover (LULC) maps, which distinguish between features such as water, vegetation, bare soil, and built environment.</p>
 <p><strong>How does it work?</strong></p>
 <p>Image classification methods can be broken down into three broad types, summarised in the table below.</p>
 <table class="table">
@@ -235,17 +236,77 @@ div.csl-indent {
 </tbody>
 </table>
 <p>It is also possible to define between a <em>hard</em> or <em>fuzzy</em> logic for per-pixel classification. Hard classification produces singular, discrete values for each pixel (e.g.&nbsp;a pixel that contains a combination of forest and water will be classified solely as one or the other, depending on the method). Fuzzy classification is an attempt to better represent the heterogeneous nature of the real-world being observed. Instead of being assigned to a single discrete class, each pixel is given an estimate of the proportion of each land-cover type found within it (e.g.&nbsp;20% water, 70% forest, 10% scrub/grassland) <span class="citation" data-cites="jensenIntroductoryDigitalImage2015">(<a href="references.html#ref-jensenIntroductoryDigitalImage2015" role="doc-biblioref">Jensen 2015</a> , Ch.9)</span>. The concept of fuzzy classification and sub-pixel analysis is discussed further in Chapter 7.</p>
+<p><strong>Give us an example</strong></p>
+<p>The Iterative Self-Organising Data Analysis Technique (ISODATA) is an extension of k-means clustering analysis, a form of unsupervised classification. Key modifications include combining clusters that are too ‘close together’ in the dimensional feature space, and applying rules for splitting single clusters into two.</p>
+<table class="table">
+<caption>Parameters in an ISODATA classification algorithm. Source: Jensen <span class="citation" data-cites="jensenIntroductoryDigitalImage2015">(<a href="references.html#ref-jensenIntroductoryDigitalImage2015" role="doc-biblioref">2015</a>)</span></caption>
+<colgroup>
+<col style="width: 27%">
+<col style="width: 72%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(C_{max}\)</span></td>
+<td>Maximum number of clusters</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(T\)</span></td>
+<td>Maximum % pixels whose class values can remain the same between iterations</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(M\)</span></td>
+<td>Maximum number of times the algorithm iterates through classifying pixels and recalculating cluster mean vectors.</td>
+</tr>
+<tr class="even">
+<td>Min. members</td>
+<td>Minimum % of members in a cluster. Clusters below this threshold are deleted and the members assigned to alternative clusters.</td>
+</tr>
+<tr class="odd">
+<td>Min. distance</td>
+<td>Minimum separation distance between cluster means. Clusters with a separation distance below this threshold are merged.</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\sigma_{max}\)</span></td>
+<td>Determines when a cluster is split into two.</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="sec-week6application" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="sec-week6application"><span class="header-section-number">6.2</span> Application</h2>
+<p><strong>Supervised classification for disaster risk assessment</strong></p>
+<p>A key component of disaster management and resilience is identifying areas at greatest risk of damage - where risk is a function of both hazard (the likelihood of disaster affecting the area) and vulnerability (the loss or damage an area would suffer in the event of disaster). Remote sensing data combined with classification tools can be used to develop risk maps in diverse settings. For example, support vector machines (SVMs), have been applied in flood settings in Malaysia by Tehrany et al. <span class="citation" data-cites="tehranyFloodSusceptibilityMapping2014">(<a href="references.html#ref-tehranyFloodSusceptibilityMapping2014" role="doc-biblioref">2014</a>)</span> and Mojadaddi et al. <span class="citation" data-cites="mojaddadiEnsembleMachinelearningbasedGeospatial2017">(<a href="references.html#ref-mojaddadiEnsembleMachinelearningbasedGeospatial2017" role="doc-biblioref">2017</a>)</span>.</p>
+<p>In each case, a set of parameters are standardised and form the inputs for the SVM, and the output being a ‘flooded’ or ‘non-flooded’ label for each pixel/observation. The SVM ‘hyperplane’ is then optimised to find the greatest separation amongst the data while minimising the number of misclassification errors <span class="citation" data-cites="palSupportVectorMachines2005">(<a href="references.html#ref-palSupportVectorMachines2005" role="doc-biblioref">Pal and Mather 2005</a>)</span>. From this, a hazard map can be built that estimates the probability of flood in a certain pixel given the value of the input parameters. The final output of each study is a map where each pixel or raster cell has a single value indicating the risk indice.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/mojaddadi-riskmap.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Example of a flood risk map developed using SVM supervised classification. Source: Mojadaddi et al.&nbsp;2017.</figcaption><p></p>
+</figure>
+</div>
 </section>
 <section id="sec-week6reflection" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="sec-week6reflection"><span class="header-section-number">6.3</span> Reflection</h2>
+<p>I found support vector machines the heftiest conceptual challenge for this week. At first sight, terminology such as hyperplanes and support vectors is intimidating to absorb within a fast-paced lecture, but I found the resources such as Srivastava’s <a href="https://medium.com/analytics-vidhya/support-vector-machines-svm-87841ab63b8">Support Vector Machines article on Medium</a>, and Pal and Mather’s article <em>Support vector machines for classification in remote sensing</em> <span class="citation" data-cites="palSupportVectorMachines2005">(<a href="references.html#ref-palSupportVectorMachines2005" role="doc-biblioref">2005</a>)</span> useful to flesh out the concept and break down the complexity. Further, seeing how the method can be applied in context (as described <a href="#sec-week6application">above</a>) gave me a better sense of the rationale behind the method and how it adapts from other machine learning classification methods.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
 <div id="ref-jensenIntroductoryDigitalImage2015" class="csl-entry" role="doc-biblioentry">
 Jensen, John R. 2015. <em>Introductory Digital Image Processing: A Remote Sensing Perspective.</em> 4th ed. <span>Prentice-Hall Inc.</span>
+</div>
+<div id="ref-mojaddadiEnsembleMachinelearningbasedGeospatial2017" class="csl-entry" role="doc-biblioentry">
+Mojaddadi, H., B. Pradhan, H. Nampak, N. Ahmad, and A. H. B. Ghazali. 2017. <span>“Ensemble Machine-Learning-Based Geospatial Approach for Flood Risk Assessment Using Multi-Sensor Remote-Sensing Data and <span>GIS</span>.”</span> <em>Geomatics, Natural Hazards and Risk</em> 8 (2): 1080–1102. <a href="https://doi.org/10.1080/19475705.2017.1294113">https://doi.org/10.1080/19475705.2017.1294113</a>.
+</div>
+<div id="ref-palSupportVectorMachines2005" class="csl-entry" role="doc-biblioentry">
+Pal, M., and P. M. Mather. 2005. <span>“Support Vector Machines for Classification in Remote Sensing.”</span> <em>International Journal of Remote Sensing</em> 26 (5): 1007–11. <a href="https://doi.org/10.1080/01431160512331314083">https://doi.org/10.1080/01431160512331314083</a>.
+</div>
+<div id="ref-tehranyFloodSusceptibilityMapping2014" class="csl-entry" role="doc-biblioentry">
+Tehrany, M. S., B. Pradhan, and M. N. Jebur. 2014. <span>“Flood Susceptibility Mapping Using a Novel Ensemble Weights-of-Evidence and Support Vector Machine Models in <span>GIS</span>.”</span> <em>Journal of Hydrology</em> 512: 332–43. <a href="https://doi.org/10.1016/j.jhydrol.2014.03.008">https://doi.org/10.1016/j.jhydrol.2014.03.008</a>.
 </div>
 </div>
 </section>
