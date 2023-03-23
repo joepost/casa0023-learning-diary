@@ -1,8 +1,32 @@
 ---
-title: "Classification II: Accuracy"
+title: "Classification II"
 ---
 
 ## Summary {#sec-week7summary}
+
+**Recap: what was covered in Classification I (Week 6)?**
+
+[Week 6](week6.qmd) covers the basics of classification techniques in remote sensing, including distinguishing between supervised and unsupervised methods, and an example of different methods (ISODATA, SVM) and their application.
+
+**What is covered in Classification II?**
+
+This diary entry covers object based analysis and sub-pixel analysis, spatial cross-validation, and measures of accuracy for classification models.
+
+::: panel-tabset
+## Object Based Image Analysis (OBIA)
+
+Trains a model to classify images based on 'objects' - segments of pixels that have been grouped together as single entity. This compares with pixel-based analysis where each pixel is classified in isolation. There are two steps to OBIA:
+
+1.  Segmentation: grouping the pixels together into discrete objects which should be defined by similar shape and spectral characteristics. Benz, Baatz and Schreier [-@benzOSCARobjectOrientedSegmentation2001] developed an early approach to segmentation specifically for remote sensing data, which aggregates similar pixels into segments while keeping the measured heterogeneity below a specified threshold. Heterogeneity is measured as a combination of both spectral and spatial characteristics - where spatial is further broken down into measures of *smoothness* and *compactness*.
+
+2.  Classification: classify the segmented objects, using the same methods as would be used in a pixel-based analysis.
+
+OBIA has advantages over pixel-based analysis in that the model is not restricted to spectral information; rather, the model also takes the pixel's context into account (i.e. through measures of shape).
+
+## Sub-pixel Analysis
+
+## Spatial Cross-Validation
+:::
 
 ## Application {#sec-week7application}
 

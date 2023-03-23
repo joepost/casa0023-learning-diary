@@ -156,44 +156,44 @@
   {
     "objectID": "week6.html#sec-week6summary",
     "href": "week6.html#sec-week6summary",
-    "title": "6  Classification",
+    "title": "6  Classification I",
     "section": "6.1 Summary",
     "text": "6.1 Summary\nWhat is image classification?\nThe purpose of classification is to transform a raster of remote sensing spectral data into a meaningful set of categories, to aid interpretation and usability. A common example is the development of land use/land cover (LULC) maps, which distinguish between features such as water, vegetation, bare soil, and built environment.\nHow does it work?\nImage classification methods can be broken down into three broad types, summarised in the table below.\n\n\n\n\n\n\n\n\nMethod\nExample\nDetails\n\n\n\n\nUnsupervised (pixel-based)\nK-means clustering; ISODATA\nAlgorithm groups pixels into a specified number of clusters, which must then be manually classified based on their features.\n\n\nSupervised (pixel-based)\nMaximum likelihood, Minimum distance, Principal components analysis (PCA), Support vector machine (SVM)\nInvolves training and testing sets. Train the model on data labelled with desired categories, and then apply the model to a new image/dataset to classify.\n\n\nObject identification\nObject based image analysis (OBIA)\nAs opposed to pixel-based, seeks to combine groups of pixels into discrete objects. My involve input statistics such as shape, texture, context, and spectral signature. At high spatial resolutions, OBIA generally outperforms pixel-based classification, as it accounts for both spectral and contextual information.\n\n\n\nIt is also possible to define between a hard or fuzzy logic for per-pixel classification. Hard classification produces singular, discrete values for each pixel (e.g. a pixel that contains a combination of forest and water will be classified solely as one or the other, depending on the method). Fuzzy classification is an attempt to better represent the heterogeneous nature of the real-world being observed. Instead of being assigned to a single discrete class, each pixel is given an estimate of the proportion of each land-cover type found within it (e.g. 20% water, 70% forest, 10% scrub/grassland) (Jensen 2015 , Ch.9). The concept of fuzzy classification and sub-pixel analysis is discussed further in Chapter 7.\nGive us an example\nThe Iterative Self-Organising Data Analysis Technique (ISODATA) is an extension of k-means clustering analysis, a form of unsupervised classification. Key modifications include combining clusters that are too ‘close together’ in the dimensional feature space, and applying rules for splitting single clusters into two.\n\nParameters in an ISODATA classification algorithm. Source: Jensen (2015)\n\n\n\n\n\n\nParameter\nDescription\n\n\n\n\n\\(C_{max}\\)\nMaximum number of clusters\n\n\n\\(T\\)\nMaximum % pixels whose class values can remain the same between iterations\n\n\n\\(M\\)\nMaximum number of times the algorithm iterates through classifying pixels and recalculating cluster mean vectors.\n\n\nMin. members\nMinimum % of members in a cluster. Clusters below this threshold are deleted and the members assigned to alternative clusters.\n\n\nMin. distance\nMinimum separation distance between cluster means. Clusters with a separation distance below this threshold are merged.\n\n\n\\(\\sigma_{max}\\)\nDetermines when a cluster is split into two."
   },
   {
     "objectID": "week6.html#sec-week6application",
     "href": "week6.html#sec-week6application",
-    "title": "6  Classification",
+    "title": "6  Classification I",
     "section": "6.2 Application",
     "text": "6.2 Application\nSupervised classification for disaster risk assessment\nA key component of disaster management and resilience is identifying areas at greatest risk of damage - where risk is a function of both hazard (the likelihood of disaster affecting the area) and vulnerability (the loss or damage an area would suffer in the event of disaster). Remote sensing data combined with classification tools can be used to develop risk maps in diverse settings. For example, support vector machines (SVMs), have been applied in flood settings in Malaysia by Tehrany et al. (2014) and Mojadaddi et al. (2017).\nIn each case, a set of parameters are standardised and form the inputs for the SVM, and the output being a ‘flooded’ or ‘non-flooded’ label for each pixel/observation. The SVM ‘hyperplane’ is then optimised to find the greatest separation amongst the data while minimising the number of misclassification errors (Pal and Mather 2005). From this, a hazard map can be built that estimates the probability of flood in a certain pixel given the value of the input parameters. The final output of each study is a map where each pixel or raster cell has a single value indicating the risk indice.\n\n\n\nExample of a flood risk map developed using SVM supervised classification. Source: Mojadaddi et al. 2017."
   },
   {
     "objectID": "week6.html#sec-week6reflection",
     "href": "week6.html#sec-week6reflection",
-    "title": "6  Classification",
+    "title": "6  Classification I",
     "section": "6.3 Reflection",
     "text": "6.3 Reflection\nI found support vector machines the heftiest conceptual challenge for this week. At first sight, terminology such as hyperplanes and support vectors is intimidating to absorb within a fast-paced lecture, but I found the resources such as Srivastava’s Support Vector Machines article on Medium, and Pal and Mather’s article Support vector machines for classification in remote sensing (2005) useful to flesh out the concept and break down the complexity. Further, seeing how the method can be applied in context (as described above) gave me a better sense of the rationale behind the method and how it adapts from other machine learning classification methods.\n\n\n\n\nJensen, John R. 2015. Introductory Digital Image Processing: A Remote Sensing Perspective. 4th ed. Prentice-Hall Inc.\n\n\nMojaddadi, H., B. Pradhan, H. Nampak, N. Ahmad, and A. H. B. Ghazali. 2017. “Ensemble Machine-Learning-Based Geospatial Approach for Flood Risk Assessment Using Multi-Sensor Remote-Sensing Data and GIS.” Geomatics, Natural Hazards and Risk 8 (2): 1080–1102. https://doi.org/10.1080/19475705.2017.1294113.\n\n\nPal, M., and P. M. Mather. 2005. “Support Vector Machines for Classification in Remote Sensing.” International Journal of Remote Sensing 26 (5): 1007–11. https://doi.org/10.1080/01431160512331314083.\n\n\nTehrany, M. S., B. Pradhan, and M. N. Jebur. 2014. “Flood Susceptibility Mapping Using a Novel Ensemble Weights-of-Evidence and Support Vector Machine Models in GIS.” Journal of Hydrology 512: 332–43. https://doi.org/10.1016/j.jhydrol.2014.03.008."
   },
   {
     "objectID": "week7.html#sec-week7summary",
     "href": "week7.html#sec-week7summary",
-    "title": "7  Classification II: Accuracy",
+    "title": "7  Classification II",
     "section": "7.1 Summary",
-    "text": "7.1 Summary"
+    "text": "7.1 Summary\nRecap: what was covered in Classification I (Week 6)?\nWeek 6 covers the basics of classification techniques in remote sensing, including distinguishing between supervised and unsupervised methods, and an example of different methods (ISODATA, SVM) and their application.\nWhat is covered in Classification II?\nThis diary entry covers object based analysis and sub-pixel analysis, spatial cross-validation, and measures of accuracy for classification models.\n\nObject Based Image Analysis (OBIA)Sub-pixel AnalysisSpatial Cross-Validation\n\n\nTrains a model to classify images based on ‘objects’ - segments of pixels that have been grouped together as single entity. This compares with pixel-based analysis where each pixel is classified in isolation. There are two steps to OBIA:\n\nSegmentation: grouping the pixels together into discrete objects which should be defined by similar shape and spectral characteristics. Benz, Baatz and Schreier (2001) developed an early approach to segmentation specifically for remote sensing data, which aggregates similar pixels into segments while keeping the measured heterogeneity below a specified threshold. Heterogeneity is measured as a combination of both spectral and spatial characteristics - where spatial is further broken down into measures of smoothness and compactness.\nClassification: classify the segmented objects, using the same methods as would be used in a pixel-based analysis.\n\nOBIA has advantages over pixel-based analysis in that the model is not restricted to spectral information; rather, the model also takes the pixel’s context into account (i.e. through measures of shape)."
   },
   {
     "objectID": "week7.html#sec-week7application",
     "href": "week7.html#sec-week7application",
-    "title": "7  Classification II: Accuracy",
+    "title": "7  Classification II",
     "section": "7.2 Application",
     "text": "7.2 Application"
   },
   {
     "objectID": "week7.html#sec-week7reflection",
     "href": "week7.html#sec-week7reflection",
-    "title": "7  Classification II: Accuracy",
+    "title": "7  Classification II",
     "section": "7.3 Reflection",
-    "text": "7.3 Reflection\nCan discuss the ‘jakubnowosad’ website and the process provided for OBIA"
+    "text": "7.3 Reflection\nCan discuss the ‘jakubnowosad’ website and the process provided for OBIA\n\n\n\n\nBenz, U., M. Baatz, and G. Schreier. 2001. “OSCAR-object Oriented Segmentation and Classification of Advanced Radar Allow Automated Information Extraction.” In IGARSS 2001. Scanning the Present and Resolving the Future. Proceedings. IEEE 2001 International Geoscience and Remote Sensing Symposium (Cat. No.01CH37217), 4:1913–1915 vol.4. https://doi.org/10.1109/IGARSS.2001.977114."
   },
   {
     "objectID": "week8.html#sec-week8summary",

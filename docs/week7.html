@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CASA0023 Weekly Learning Diary - 7&nbsp; Classification II: Accuracy</title>
+<title>CASA0023 Weekly Learning Diary - 7&nbsp; Classification II</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,25 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
 }
 </style>
 
@@ -70,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II: Accuracy</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -125,12 +144,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification</span></a>
+  <a href="./week6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week7.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II: Accuracy</span></a>
+  <a href="./week7.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -163,7 +182,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II: Accuracy</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></h1>
 </div>
 
 
@@ -180,6 +199,29 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="sec-week7summary" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="sec-week7summary"><span class="header-section-number">7.1</span> Summary</h2>
+<p><strong>Recap: what was covered in Classification I (Week 6)?</strong></p>
+<p><a href="./week6.html">Week 6</a> covers the basics of classification techniques in remote sensing, including distinguishing between supervised and unsupervised methods, and an example of different methods (ISODATA, SVM) and their application.</p>
+<p><strong>What is covered in Classification II?</strong></p>
+<p>This diary entry covers object based analysis and sub-pixel analysis, spatial cross-validation, and measures of accuracy for classification models.</p>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Object Based Image Analysis (OBIA)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Sub-pixel Analysis</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Spatial Cross-Validation</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Trains a model to classify images based on ‘objects’ - segments of pixels that have been grouped together as single entity. This compares with pixel-based analysis where each pixel is classified in isolation. There are two steps to OBIA:</p>
+<ol type="1">
+<li><p>Segmentation: grouping the pixels together into discrete objects which should be defined by similar shape and spectral characteristics. Benz, Baatz and Schreier <span class="citation" data-cites="benzOSCARobjectOrientedSegmentation2001">(<a href="references.html#ref-benzOSCARobjectOrientedSegmentation2001" role="doc-biblioref">2001</a>)</span> developed an early approach to segmentation specifically for remote sensing data, which aggregates similar pixels into segments while keeping the measured heterogeneity below a specified threshold. Heterogeneity is measured as a combination of both spectral and spatial characteristics - where spatial is further broken down into measures of <em>smoothness</em>&nbsp;and <em>compactness</em>.</p></li>
+<li><p>Classification: classify the segmented objects, using the same methods as would be used in a pixel-based analysis.</p></li>
+</ol>
+<p>OBIA has advantages over pixel-based analysis in that the model is not restricted to spectral information; rather, the model also takes the pixel’s context into account (i.e.&nbsp;through measures of shape).</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+
+</div>
+</div>
+</div>
 </section>
 <section id="sec-week7application" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="sec-week7application"><span class="header-section-number">7.2</span> Application</h2>
@@ -189,6 +231,11 @@ ul.task-list li input[type="checkbox"] {
 <p>Can discuss the ‘jakubnowosad’ website and the process provided for OBIA</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-benzOSCARobjectOrientedSegmentation2001" class="csl-entry" role="doc-biblioentry">
+Benz, U., M. Baatz, and G. Schreier. 2001. <span>“<span class="nocase">OSCAR-object</span> Oriented Segmentation and Classification of Advanced Radar Allow Automated Information Extraction.”</span> In <em><span>IGARSS</span> 2001. <span>Scanning</span> the <span>Present</span> and <span>Resolving</span> the <span>Future</span>. <span>Proceedings</span>. <span>IEEE</span> 2001 <span>International Geoscience</span> and <span>Remote Sensing Symposium</span> (<span>Cat</span>. <span>No</span>.<span>01CH37217</span>)</em>, 4:1913–1915 vol.4. <a href="https://doi.org/10.1109/IGARSS.2001.977114">https://doi.org/10.1109/IGARSS.2001.977114</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -328,7 +375,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./week6.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

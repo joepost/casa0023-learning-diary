@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CASA0023 Weekly Learning Diary - 6&nbsp; Classification</title>
+<title>CASA0023 Weekly Learning Diary - 6&nbsp; Classification I</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -90,7 +90,7 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -145,12 +145,12 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week6.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification</span></a>
+  <a href="./week6.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week7.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II: Accuracy</span></a>
+  <a href="./week7.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -183,7 +183,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></h1>
 </div>
 
 
@@ -206,9 +206,9 @@ div.csl-indent {
 <p>Image classification methods can be broken down into three broad types, summarised in the table below.</p>
 <table class="table">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 61%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -235,14 +235,14 @@ div.csl-indent {
 </tr>
 </tbody>
 </table>
-<p>It is also possible to define between a <em>hard</em> or <em>fuzzy</em> logic for per-pixel classification. Hard classification produces singular, discrete values for each pixel (e.g.&nbsp;a pixel that contains a combination of forest and water will be classified solely as one or the other, depending on the method). Fuzzy classification is an attempt to better represent the heterogeneous nature of the real-world being observed. Instead of being assigned to a single discrete class, each pixel is given an estimate of the proportion of each land-cover type found within it (e.g.&nbsp;20% water, 70% forest, 10% scrub/grassland) <span class="citation" data-cites="jensenIntroductoryDigitalImage2015">(<a href="references.html#ref-jensenIntroductoryDigitalImage2015" role="doc-biblioref">Jensen 2015</a> , Ch.9)</span>. The concept of fuzzy classification and sub-pixel analysis is discussed further in Chapter 7.</p>
+<p>It is also possible to define between a <em>hard</em> or <em>fuzzy</em> logic for per-pixel classification. Hard classification produces singular, discrete values for each pixel (e.g.&nbsp;a pixel that contains a combination of forest and water will be classified solely as one or the other, depending on the method). Fuzzy classification is an attempt to better represent the heterogeneous nature of the real-world being observed. Instead of being assigned to a single discrete class, each pixel is given an estimate of the proportion of each land-cover type found within it (e.g.&nbsp;20% water, 70% forest, 10% scrub/grassland) <span class="citation" data-cites="jensenIntroductoryDigitalImage2015">(<a href="references.html#ref-jensenIntroductoryDigitalImage2015" role="doc-biblioref">Jensen 2015</a> , Ch.9)</span>. The concept of fuzzy classification and sub-pixel analysis is discussed further in <a href="./week7.html">Chapter 7</a>.</p>
 <p><strong>Give us an example</strong></p>
 <p>The Iterative Self-Organising Data Analysis Technique (ISODATA) is an extension of k-means clustering analysis, a form of unsupervised classification. Key modifications include combining clusters that are too ‘close together’ in the dimensional feature space, and applying rules for splitting single clusters into two.</p>
 <table class="table">
 <caption>Parameters in an ISODATA classification algorithm. Source: Jensen <span class="citation" data-cites="jensenIntroductoryDigitalImage2015">(<a href="references.html#ref-jensenIntroductoryDigitalImage2015" role="doc-biblioref">2015</a>)</span></caption>
 <colgroup>
-<col style="width: 27%">
-<col style="width: 72%">
+<col style="width: 19%">
+<col style="width: 80%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -453,7 +453,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./week7.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II: Accuracy</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

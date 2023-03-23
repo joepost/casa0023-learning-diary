@@ -1,5 +1,5 @@
 ---
-title: "Classification"
+title: "Classification I"
 ---
 
 ## Summary {#sec-week6summary}
@@ -13,25 +13,25 @@ The purpose of classification is to transform a raster of remote sensing spectra
 Image classification methods can be broken down into three broad types, summarised in the table below.
 
 | Method                     | Example                                                                                                 | Details                                                                                                                                                                                                                                                                                                                   |
-|------------------------|------------------------|------------------------|
+|--------------|--------------|---------------------------------------------|
 | Unsupervised (pixel-based) | K-means clustering; ISODATA                                                                             | Algorithm groups pixels into a specified number of clusters, which must then be manually classified based on their features.                                                                                                                                                                                              |
 | Supervised (pixel-based)   | Maximum likelihood, Minimum distance, Principal components analysis (PCA), Support vector machine (SVM) | Involves training and testing sets. Train the model on data labelled with desired categories, and then apply the model to a new image/dataset to classify.                                                                                                                                                                |
 | Object identification      | Object based image analysis (OBIA)                                                                      | As opposed to pixel-based, seeks to combine groups of pixels into discrete objects. My involve input statistics such as shape, texture, context, and spectral signature. At high spatial resolutions, OBIA generally outperforms pixel-based classification, as it accounts for both spectral and contextual information. |
 
-It is also possible to define between a *hard* or *fuzzy* logic for per-pixel classification. Hard classification produces singular, discrete values for each pixel (e.g. a pixel that contains a combination of forest and water will be classified solely as one or the other, depending on the method). Fuzzy classification is an attempt to better represent the heterogeneous nature of the real-world being observed. Instead of being assigned to a single discrete class, each pixel is given an estimate of the proportion of each land-cover type found within it (e.g. 20% water, 70% forest, 10% scrub/grassland) [@jensenIntroductoryDigitalImage2015 , Ch.9]. The concept of fuzzy classification and sub-pixel analysis is discussed further in Chapter 7.
+It is also possible to define between a *hard* or *fuzzy* logic for per-pixel classification. Hard classification produces singular, discrete values for each pixel (e.g. a pixel that contains a combination of forest and water will be classified solely as one or the other, depending on the method). Fuzzy classification is an attempt to better represent the heterogeneous nature of the real-world being observed. Instead of being assigned to a single discrete class, each pixel is given an estimate of the proportion of each land-cover type found within it (e.g. 20% water, 70% forest, 10% scrub/grassland) [@jensenIntroductoryDigitalImage2015 , Ch.9]. The concept of fuzzy classification and sub-pixel analysis is discussed further in [Chapter 7](week7.qmd).
 
 **Give us an example**
 
 The Iterative Self-Organising Data Analysis Technique (ISODATA) is an extension of k-means clustering analysis, a form of unsupervised classification. Key modifications include combining clusters that are too 'close together' in the dimensional feature space, and applying rules for splitting single clusters into two.
 
-| Parameter      | Description                                                                                                                     |
-|--------------------|----------------------------------------------------|
-| $C_{max}$      | Maximum number of clusters                                                                                                      |
-| $T$            | Maximum % pixels whose class values can remain the same between iterations                                                      |
-| $M$            | Maximum number of times the algorithm iterates through classifying pixels and recalculating cluster mean vectors.               |
-| Min. members   | Minimum % of members in a cluster. Clusters below this threshold are deleted and the members assigned to alternative clusters.  |
-| Min. distance  | Minimum separation distance between cluster means. Clusters with a separation distance below this threshold are merged.         |
-| $\sigma_{max}$ | Determines when a cluster is split into two.                                                                                    |
+| Parameter      | Description                                                                                                                    |
+|--------------|----------------------------------------------------------|
+| $C_{max}$      | Maximum number of clusters                                                                                                     |
+| $T$            | Maximum % pixels whose class values can remain the same between iterations                                                     |
+| $M$            | Maximum number of times the algorithm iterates through classifying pixels and recalculating cluster mean vectors.              |
+| Min. members   | Minimum % of members in a cluster. Clusters below this threshold are deleted and the members assigned to alternative clusters. |
+| Min. distance  | Minimum separation distance between cluster means. Clusters with a separation distance below this threshold are merged.        |
+| $\sigma_{max}$ | Determines when a cluster is split into two.                                                                                   |
 
 : Parameters in an ISODATA classification algorithm. Source: Jensen [-@jensenIntroductoryDigitalImage2015]
 
