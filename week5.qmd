@@ -14,7 +14,7 @@ Analysis is divided between a client side - the Earth Engine browser interface -
 
 Due to the huge volume of data that can be involved in Earth Engine calculations and visualisations, the system also uses different methods to reduce data load/computing time:
 
-::: panel-tabset
+::: {.panel-tabset style="background-color: lightgrey"}
 ## Pyramid Scaling
 
 In Earth Engine, the spatial resolution is determined by the output, not the input. The system stores a 'pyramid' of progressively reduced resolution tiles, which adjust depending on the scale of the user's view. The smaller (reduced resolution) layers of the pyramid are calculated through a down-sampling method, such as the *mean* for numeric data, or the *mode* for classification data.

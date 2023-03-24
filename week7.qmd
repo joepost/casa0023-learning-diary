@@ -12,7 +12,7 @@ title: "Classification II"
 
 This diary entry covers object based analysis and sub-pixel analysis, spatial cross-validation, and measures of accuracy for classification models.
 
-::: {.panel-tabset style="color: darkblue"}
+::: {.panel-tabset style="background-color: lightgrey"}
 ## Object Based Image Analysis (OBIA)
 
 Trains a model to classify images based on 'objects' - segments of pixels that have been grouped together as single entity. This compares with pixel-based analysis where each pixel is classified in isolation. There are two steps to OBIA:
