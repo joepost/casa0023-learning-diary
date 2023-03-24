@@ -86,7 +86,7 @@ Tasseled-cap transformation continues to be used in ecological applications, suc
 
 In this introduction week, the topics that stood out to me were the ingenuity of the technical aspects, bridging the gap between the physics of electromagnetic radiation and applying this knowledge to produce very powerful and informative datasets. These aspects include the mechanics behind a sensor's spectral resolution, the translation of images into distributions of pixel values, and the additional considerations of using an active sensor.
 
-::: {.panel-tabset style="background-color: lightgrey"}
+::: {.panel-tabset style="background-color: whitesmoke"}
 ## Spectral Resolution
 
 When reading about a sensor, the band range will often be specified - e.g., a sensor may be described to observe the area of the electromagnetic spectrum between 525 - 605 nm (*nanometres* being a measure of the wavelength). However (and this is quite intuitive when you stop to think about it), the sensor does not actually have such a discrete cut-off at these wavelengths. Detectors are actually sensitive to a region of the EMS, where the maximum sensitivity is at the middle spot of this region, with sensitivity declining as it moves away from this point. The stated range given for sensors uses the Full Width at Half Maximum (FWHM) criteria, which is the range of wavelengths detected at 50% or greater intensity, as shown in the figure below, from [@jensenIntroductoryDigitalImage2015].

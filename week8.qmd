@@ -6,15 +6,15 @@ title: "Urban Heat Island"
 
 **What is the Urban Heat Island effect?**
 
-Phenomenon of comparatively higher temperatures (atmospheric and surface) in urban areas compared with surrounding rural areas. Caused by comparatively lower vegetation, an increase in dark and impervious surfaces, and density of energy/electricity expenditure (e.g. transport, air conditioning).
+The Urban Heat Island (UHI) phenomenon is where urban areas have comparatively higher temperatures (atmospheric and surface) compared with surrounding rural areas. Caused by comparatively lower vegetation, an increase in dark and impervious surfaces, and density of energy/electricity expenditure (e.g. transport, air conditioning). The urban morphology can intensify the UHI effect; for example, Debbage and Shepherd [-@debbageUrbanHeatIsland2015] found in a study of 50 US cities that spatial contiguity (e.g. unbroken developed land) increased the magnitude of the UHI effect, whether in densely populated or sprawling cities.
 
 **What is the impact?**
 
-Text
+There is an extensive body of literature on the diverse impacts of UHI. Roxon et al. [-@roxonUrbanHeatIsland2020] quantified the added financial cost and CO2 emissions due to increased energy demand in US cities exposed to UHI, especially in summer months. Interestingly, the authors also estimated the benefits of UHI in some colder climate cities, by reducing energy demand for heating during colder months. The UHI also exacerbates the effect of heat waves and a warming climate, leading to increased morbidity and mortality for urban residents [@margolisHeatWavesRising2014; @biEffectsExtremeHeat2011; @muckeHeatExtremesPublic2020].
 
 **What can be done?**
 
-Text
+The UHI effect features prominently in policy goals and urban discourse around the globe, as demonstrated by high-level reports such as the United Nation's 'Beat the Heat' report [@unitednationsenvironmentprogramBeatingHeatSustainable2021], billed as a "sustainable cooling handbook for cities". In terms of local mitigation approaches, there are diverse examples, such as the development of "green corridors" of trees in Medellin, Colombia, traffic reduction and increased vegetation through Barcelona's 'superblocks', or coordinated metropolitan wide responses as in the case of Athens' Chief Heat Officer (see [Week 4](week4.qmd) for further details).
 
 ## Application {#sec-week8application}
 
