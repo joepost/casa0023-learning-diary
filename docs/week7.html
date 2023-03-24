@@ -252,8 +252,8 @@ div.csl-indent {
 <p>The acronyms in the matrix above are as follows <span class="citation" data-cites="barsiAccuracyDimensionsRemote2018">(<a href="references.html#ref-barsiAccuracyDimensionsRemote2018" role="doc-biblioref">Barsi et al. 2018</a>)</span>:</p>
 <table class="table">
 <colgroup>
-<col style="width: 20%">
-<col style="width: 79%">
+<col style="width: 23%">
+<col style="width: 76%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -330,10 +330,19 @@ div.csl-indent {
 </section>
 <section id="sec-week7application" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="sec-week7application"><span class="header-section-number">7.2</span> Application</h2>
+<p>The development of classification models in remote sensing is very much an evolving process, as new methods are developed to optimise predictive capability whilst accounting for spatial dependency (autocorrelation). A (conceptually) simple model that accounts for spatial dependence is leave one out cross validation (LOO-CV), developed by Canovas-Garcia et al. <span class="citation" data-cites="canovas-garciaModificationRandomForest2017">(<a href="references.html#ref-canovas-garciaModificationRandomForest2017" role="doc-biblioref">2017</a>)</span>. The authors also developed an R package, <code>SDRF</code>, to work alongside the <code>randomForest</code> package and explicitly incorporate spatial splitting.</p>
+<p>As part of this study, the authors assessed the performance results of random forest models accounting for spatial dependence compared with non-spatial counterparts. In this case, a confusion matrix comparing multiple models would become cumbersome, and the authors instead innovatively represented two common metrics, <em>omission error</em> and <em>commission error</em>, using a sequence of pyramid graphs, which provides a quick way to compare results across models and case study areas.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/canovas-2017-pyramidfig.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Error pyramid comparing random forest classification models. Source: Canovas-Garcia et al.&nbsp;(2017).</figcaption><p></p>
+</figure>
+</div>
 </section>
 <section id="sec-week7reflection" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="sec-week7reflection"><span class="header-section-number">7.3</span> Reflection</h2>
-<p>Can discuss the ‘jakubnowosad’ website and the process provided for OBIA</p>
+<p>This week, I was interested in a case study presented by Karasiak et al. <span class="citation" data-cites="karasiakSpatialDependenceTraining2022">(<a href="references.html#ref-karasiakSpatialDependenceTraining2022" role="doc-biblioref">Karasiak et al. 2022</a>)</span>, and as reported by Inglada <span class="citation" data-cites="ingladaMachineLearningLand2018">(<a href="references.html#ref-ingladaMachineLearningLand2018" role="doc-biblioref">Inglada 2018</a>)</span>, that highlights the importance of context and domain knowledge when evaluating classification models, outside of purely using performance metrics. In the <a href="https://sites.google.com/site/dinoienco/tiselac-time-series-land-cover-classification-challenge?authuser=0">TiSeLaC (Time Series Land Cover Classification Challenge)</a> machine learning challenge, participants were tasked with the goal of producing a classification model with performance evaluated using F-scores (a machine learning metric that combines precision/UA and recall/PA scores of a model). One of the winning entrants scored an exceptionally high F-score of between 90 - 98%. Upon further investigation, Inglada found that the model was built using spatial nearest-neighbour classification, with the feature input being the pixel coordinates - i.e., no spectral data was used in the prediction.</p>
+<p>These results confirm that (1) spatial autocorrelation was evident in the input data, as would be expected for remote sensing imagery, and (2) neighbouring pixels were present in the training and test sets, meaning that the test set was not independent from the training data <span class="citation" data-cites="ingladaMachineLearningLand2018">(<a href="references.html#ref-ingladaMachineLearningLand2018" role="doc-biblioref">Inglada 2018</a>)</span>. The takeaway from this is that focusing purely on metric optimisation, without considering the process or conceptual underpinning of the model, can easily lead to misleading results. I find that this lesson is a useful reminder of the importance of a multidisciplinary understanding, and that a machine learning specialist (even if they have a much deeper understanding of machine learning processes) may not be better suited to an applied geospatial task.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
@@ -342,6 +351,12 @@ Barsi, Á., Zs. Kugler, I. László, Gy. Szabó, and H. M. Abdulmutalib. 2018. <
 </div>
 <div id="ref-benzOSCARobjectOrientedSegmentation2001" class="csl-entry" role="doc-biblioentry">
 Benz, U., M. Baatz, and G. Schreier. 2001. <span>“<span class="nocase">OSCAR-object</span> Oriented Segmentation and Classification of Advanced Radar Allow Automated Information Extraction.”</span> In <em><span>IGARSS</span> 2001. <span>Scanning</span> the <span>Present</span> and <span>Resolving</span> the <span>Future</span>. <span>Proceedings</span>. <span>IEEE</span> 2001 <span>International Geoscience</span> and <span>Remote Sensing Symposium</span> (<span>Cat</span>. <span>No</span>.<span>01CH37217</span>)</em>, 4:1913–1915 vol.4. <a href="https://doi.org/10.1109/IGARSS.2001.977114">https://doi.org/10.1109/IGARSS.2001.977114</a>.
+</div>
+<div id="ref-canovas-garciaModificationRandomForest2017" class="csl-entry" role="doc-biblioentry">
+Cánovas-García, Fulgencio, Francisco Alonso-Sarría, Francisco Gomariz-Castillo, and Fernando Oñate-Valdivieso. 2017. <span>“Modification of the Random Forest Algorithm to Avoid Statistical Dependence Problems When Classifying Remote Sensing Imagery.”</span> <em>Computers &amp; Geosciences</em> 103 (June): 1–11. <a href="https://doi.org/10.1016/j.cageo.2017.02.012">https://doi.org/10.1016/j.cageo.2017.02.012</a>.
+</div>
+<div id="ref-ingladaMachineLearningLand2018" class="csl-entry" role="doc-biblioentry">
+Inglada, Jordi. 2018. <span>“Machine learning for land cover map production – Follow-up on the TiSeLaC challenge.”</span> 2018. <a href="https://labo.obs-mip.fr/multitemp/machine-learning-for-land-cover-map-production-follow-up-on-the-tiselac-challenge/">https://labo.obs-mip.fr/multitemp/machine-learning-for-land-cover-map-production-follow-up-on-the-tiselac-challenge/</a>.
 </div>
 <div id="ref-jensenIntroductoryDigitalImage2015" class="csl-entry" role="doc-biblioentry">
 Jensen, John R. 2015. <em>Introductory Digital Image Processing: A Remote Sensing Perspective.</em> 4th ed. <span>Prentice-Hall Inc.</span>

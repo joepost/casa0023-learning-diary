@@ -52,7 +52,7 @@ Like in any machine learning model, the performance of a remote sensing classifi
 The acronyms in the matrix above are as follows [@barsiAccuracyDimensionsRemote2018]:
 
 | **Acronym** | **Definition**                                                     |
-|---------------|---------------------------------------------------------|
+|-----------------|-------------------------------------------------------|
 | TP          | True Positive                                                      |
 | FP          | False Positive (alt: type I error)                                 |
 | TN          | True Negative                                                      |
@@ -76,8 +76,14 @@ A multi-class confusion matrix can also be represented:
 
 ## Application {#sec-week7application}
 
-The development of classification models in remote sensing is very much an evolving process, as new methods are developed to optimise predictive capability whilst accounting for spatial dependency (autocorrelation). A (conceptually) simple model that accounts for spatial dependence is leave one out cross validation (LOO-CV), developed by Canovas-Garcia et al. [-@canovas-garciaModificationRandomForest2017].
+The development of classification models in remote sensing is very much an evolving process, as new methods are developed to optimise predictive capability whilst accounting for spatial dependency (autocorrelation). A (conceptually) simple model that accounts for spatial dependence is leave one out cross validation (LOO-CV), developed by Canovas-Garcia et al. [-@canovas-garciaModificationRandomForest2017]. The authors also developed an R package, `SDRF`, to work alongside the `randomForest` package and explicitly incorporate spatial splitting.
+
+As part of this study, the authors assessed the performance results of random forest models accounting for spatial dependence compared with non-spatial counterparts. In this case, a confusion matrix comparing multiple models would become cumbersome, and the authors instead innovatively represented two common metrics, *omission error* and *commission error*, using a sequence of pyramid graphs, which provides a quick way to compare results across models and case study areas.
+
+![Error pyramid comparing random forest classification models. Source: Canovas-Garcia et al. (2017).](img/canovas-2017-pyramidfig.png)
 
 ## Reflection {#sec-week7reflection}
 
-Can discuss the 'jakubnowosad' website and the process provided for OBIA
+This week, I was interested in a case study presented by Karasiak et al. [@karasiakSpatialDependenceTraining2022], and as reported by Inglada [@ingladaMachineLearningLand2018], that highlights the importance of context and domain knowledge when evaluating classification models, outside of purely using performance metrics. In the [TiSeLaC (Time Series Land Cover Classification Challenge)](https://sites.google.com/site/dinoienco/tiselac-time-series-land-cover-classification-challenge?authuser=0) machine learning challenge, participants were tasked with the goal of producing a classification model with performance evaluated using F-scores (a machine learning metric that combines precision/UA and recall/PA scores of a model). One of the winning entrants scored an exceptionally high F-score of between 90 - 98%. Upon further investigation, Inglada found that the model was built using spatial nearest-neighbour classification, with the feature input being the pixel coordinates - i.e., no spectral data was used in the prediction.
+
+These results confirm that (1) spatial autocorrelation was evident in the input data, as would be expected for remote sensing imagery, and (2) neighbouring pixels were present in the training and test sets, meaning that the test set was not independent from the training data [@ingladaMachineLearningLand2018]. The takeaway from this is that focusing purely on metric optimisation, without considering the process or conceptual underpinning of the model, can easily lead to misleading results. I find that this lesson is a useful reminder of the importance of a multidisciplinary understanding, and that a machine learning specialist (even if they have a much deeper understanding of machine learning processes) may not be better suited to an applied geospatial task.
