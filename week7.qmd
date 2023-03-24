@@ -12,7 +12,7 @@ title: "Classification II"
 
 This diary entry covers object based analysis and sub-pixel analysis, spatial cross-validation, and measures of accuracy for classification models.
 
-::: panel-tabset
+::: {.panel-tabset style="color: darkblue"}
 ## Object Based Image Analysis (OBIA)
 
 Trains a model to classify images based on 'objects' - segments of pixels that have been grouped together as single entity. This compares with pixel-based analysis where each pixel is classified in isolation. There are two steps to OBIA:
@@ -25,12 +25,58 @@ OBIA has advantages over pixel-based analysis in that the model is not restricte
 
 ## Sub-pixel Analysis
 
-Estimating the fractions of certain land cover classes that make up a single pixel. Attempts to account for the fact that land cover (in reality) does not have discrete boundaries. Calculating sub-pixel values utilises *spectrally pure endmembers*.
+Also known as Spectral Mixture Analysis (SMA) or Linear spectral unmixing.
+
+Estimates the fractions of certain land cover classes that make up a single pixel. Attempts to account for the fact that land cover (in reality) does not have discrete boundaries. Calculating sub-pixel values utilises *spectrally pure endmembers*. These are the spectral characteristics of land cover known to be 'pure', or a single class - by contrast, most of the spectral reflectance observed by a sensor will be a function of the radiation/reflectance from a variety of endmember materials within the ground sampling distance [@jensenIntroductoryDigitalImage2015].
+
+The figure below illustrates how land cover classes may form fractions of a single pixel, and the conceptual basis behind sub-pixel analysis [@machadoIdentifyingMultidecadalChanges2013].
+
+![Source: Machado & Small (2013)](img/week7-sma.png)
+
+Useful toolkit: `MESMA` from the R library `RStoolbox`
 
 ## Spatial Cross-Validation
+
+Spatial cross-validation (CV) is designed to account for the effects of spatial autocorrelation in classification models. It is an extension of traditional (non-spatial) CV models, but instead of randomly sampling the split between test/train data, the data is split spatially in clusters (to minimise the effects of testing points being adjacent to training points, and thus invalidating the assumption of independence).
+
+An additional alternative is to use a distance buffer around testing points, to prevent any nearby points being included in the training set. This distance can be fixed arbitrarily, or through using Moran's I to calculate distance at which spatial autocorrelation effects become insignificant [@karasiakSpatialDependenceTraining2022].
+
+![Types of spatial and non-spatial cross-validation. LOO = 'Leave One Out'; SLOO = 'Spatial Leave One Out'. Source: Karasiak et al. (2022)](img/karasiak-2022-cvtypes.png)
+
+## Accuracy Assessment
+
+Like in any machine learning model, the performance of a remote sensing classification needs to be assessed to understand effectiveness and comparability to other models. In remote sensing there are a number of performance metrics, which can be represented in a confusion matrix.
+
+![Source: Barsi et al. (2018)](img/barsi-2018-confusionmatrix.png)
+
+The acronyms in the matrix above are as follows [@barsiAccuracyDimensionsRemote2018]:
+
+| **Acronym** | **Definition**                                                     |
+|---------------|---------------------------------------------------------|
+| TP          | True Positive                                                      |
+| FP          | False Positive (alt: type I error)                                 |
+| TN          | True Negative                                                      |
+| FN          | False Negative (alt: type II error)                                |
+| UA          | User's Accuracy (alt: Precision, Positive Predictive Value)        |
+| CE          | Comission Error (alt: false discovery rate)                        |
+| NPV         | Negative Prediction Value                                          |
+| FOR         | False Omission Rate                                                |
+| PA          | Producer's Accuracy (alt: recall, true positive rate, sensitivity) |
+| TNR         | True Negative Rate                                                 |
+| OE          | Omission Error (alt: false negative rate)                          |
+| FPR         | False Positive Rate                                                |
+| OA          | Overall Accuracy                                                   |
+
+Of the measures above, the **User's Accuracy**, **Producer's Accuracy** and **Overall Accuracy** are the most common reported performance metrics.
+
+A multi-class confusion matrix can also be represented:
+
+![Source: Barsi et al. (2018)](img/barsi-2018-confusionmatrix-multiclass.png)
 :::
 
 ## Application {#sec-week7application}
+
+The development of classification models in remote sensing is very much an evolving process, as new methods are developed to optimise predictive capability whilst accounting for spatial dependency (autocorrelation). A (conceptually) simple model that accounts for spatial dependence is leave one out cross validation (LOO-CV), developed by Canovas-Garcia et al. [-@canovas-garciaModificationRandomForest2017].
 
 ## Reflection {#sec-week7reflection}
 
