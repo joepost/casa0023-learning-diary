@@ -18,4 +18,16 @@ The UHI effect features prominently in policy goals and urban discourse around t
 
 ## Application {#sec-week8application}
 
+Although the negative impacts of extreme heat and the UHI effect in cities are huge and demand significant attention and action, I found the study by Roxon, Ulm and Pellenq [-@roxonUrbanHeatIsland2020] which examined the potential benefits of UHI in cold climates particularly interesting. The importance of these findings are stark - in the US, the heating and cooling of buildings contributes up to 20-25% of total energy consumption, which corresponds to a significant fraction of the country's carbon emissions. The question here is, can the UHI effect be used to an advantage to reduce energy consumption in cold climate cities, and by extension, is the implementation of UHI mitigation strategies in cold climate cities likely to *increase* energy demand and associated emissions?
+
+Based on their findings, the authors go so far as to suggest that cold climate cities (which they classify as covering most of the US) should actively design cities around maximising the UHI effect, such as through encouraging a high-density, gridded urban morphology. However, there are a number of clear limitations - the study is not remote-sensing based, and does not incorporate spatial data below state-level aggregates (i.e., even individual cities are not included in the units of analysis). All results are therefore also limited to the statewide level.
+
+Although I found some remote sensing articles with a focus on the UHI effect in cool-climate cities [e.g. @wangUrbanHeatIsland2015], there appears to be a dearth of remote sensing research estimating the comparative seasonal costs and benefits of UHI effects for cold cities.
+
 ## Reflection {#sec-week8reflection}
+
+In Week 4, I covered the work of the Athens Chief Heat Officer, a project supported by the Rockefeller foundation's [Resilient Cities Network](https://resilientcitiesnetwork.org/). Melbourne, Australia, has recently joined this movement with the appointment of two Chief Heat Officers in October 2022, who will coordinate the city's response to increasing temperatures and mitigating the UHI effect [@wallsMelbourneNowHas2022], with the city's aim being "to cool Melbourne by four degrees, to improve liveability, resilience, and community health" [@cityofmelbourneHeatSafeCity2022].
+
+[![Promotional announcement of the appointment of 2 Chief Heat Officers by the City of Melbourne. Source: Arsht-Rock Resilience Centre.](img/melbourne-heat-officers.jpg)](https://twitter.com/ArshtRock)
+
+It's interesting to see how this movement has gained traction globally, and whether time will show that municipal governments implementing this approach produce more effective heat mitigation outcomes. In most cases, strategies to reduce urban heat (such as greening, or changing materials used in buildings and infrastructure) require long term planning and long periods to take effect. In time, a research project that considers the policy history and pathways of these cities in conjunction with remotely sensed time series temperature data, could provide an interesting comparison and evaluation into this strategy, and determine whether Chief Heat Officers become ubiquitous across municipal governments in future.
