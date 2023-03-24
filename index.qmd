@@ -4,8 +4,6 @@ This is a weekly learning diary to document coursework from the module *CASA0023
 
 Use the navigation bar to switch between chapters/weeks. There is also a Glossary page which collects and explains key remote sensing terms.
 
-\[Add Intro on me\]
-
 This site is built by Joe. To see more about my work visit <https://github.com/joepost>.
 
 This site is built using Quarto. To learn more about Quarto books visit <https://quarto.org/docs/books>.
