@@ -1,0 +1,45 @@
+﻿Term,Definition,Reference Week
+Amplitude,The height of the peak of an electromagnetic wave.,1
+Atmospheric transmission,The transmission of a particular EMR wavelength through Earth’s atmosphere (i.e. how much is not absorbed by gases),1
+Bidirectional Reflectance Distribution Function (BRDF),"Driven by changes in the viewpoint (the sensor) and the illumination source (i.e. the sun), and the way energy is reflected from the earth’s surface.",1
+Bottom of atmosphere (BOA) reflectance,Synonymous with Surface reflectance (see entry). Compare with Top of atmosphere (TOA) reflectance. ,2
+Data fusion,"The combination of data from multiple sources with different spatial and spectral resolutions, such as SAR and passive sensor data.",3
+Electromagnetic radiation (EMR),"Waves of an electromagnetic field, travel through space and carry radiant energy.",1
+Emittance,Energy leaving a surface per unit area per unit time (from EMR).,1
+Exitance,Energy leaving a surface per unit area (from EMR).,1
+Feature (GEE),Google Earth Engine term for vector data,5
+Feature Space,A scatterplot of two bands from a spectral image,5
+FeatureCollection (GEE),Google Earth Engine term for a stack of vector data (lots of polygons),5
+Geostationary orbit,Satellite holds the same position over Earth’s surface (less common for EO sensors),2
+Geosynchronous orbit,Satellite matches the Earth’s rotation,2
+Ground resolution cell,The size of the pixel from a remote sensing image projected onto the ground. Relates to the Ground Sampling Distance.,1
+Ground sampling distance,"The distance between the centres of two adjacent resolution cells of the same channel. Ideally, the Ground Resolution Cell and Ground Sampling Distance should be equal (Tempfli et al. 2009, p.138).",1
+Image (GEE),Google Earth Engine term for raster data,5
+ImageCollection (GEE),Google Earth Engine term for a stack of raster data ,5
+LULC,Land Use Land Cover. Generally refers to the classification of human activities and natural elements on the landscape based on emote sensing data. ,6
+Mean Radiant Temperature,"A calculation of the temperature as it is experienced by humans, as opposed to land surface temperature (LST). Incorporates elements such as shading and building morphology. ",8
+Mie scattering,Atmospheric scattering where particles are the same size compared to wavelength. ,1
+Nadir,The location on Earth directly below a satellite sensor,2
+Non-selective scattering,Atmospheric scattering where particles are much larger than the wavelength. ,1
+Orthorectification,"The process of correcting remote sensing images to remove sensor, satellite/aircraft motion and terrain-related geometric distortions from raw imagery.",3
+Pan sharpening,"Short for panchromatic sharpening. Combines high-resolution detail from a panchromatic band with lower resolution colour detail from other bands, to produce a single ‘sharper’ colour image. ",3
+Planimetric,"In remote sensing, refers to a flat image (showing no relief or angle)",3
+Polar orbit,"Describes the orbit of remote sensing satellites that travel roughly over the Earth’s poles (north to south), as opposed to east to west.",2
+Polarisation,"Refers to the direction of wave vibration in relation to the direction of propagation. The degree of polarisation in reflected light is affected by a variety of factors including the illumination, surface roughness, color, and sensing geometry. ",1
+Pushbroom scanning,"Sensors that use a line of detectors arranged perpendicular to the flight direction of the spacecraft. As the spacecraft flies forward, the image is collected one line at a time, with all the pixels in that line being collected simultaneously. Compare with Whisk scanning. ",2
+Radiant energy,Energy carried by EMR waves.,1
+Radiant flux,Radiant energy (EMR) per unit of time.,1
+Rayleigh scattering,Atmospheric scattering where the particles are very small compared with the wavelength. ,1
+Solar azimuth,The angle of the direction of the sun measured clockwise north from the horizon.,1
+Solar flux,Energy from the sun per unit area per unit time (from EMR).,1
+Solar irradiance,Energy from the sun per unit area (from EMR). Irradiance is energy at any angle (in comparison with radiance which has a specific angle).,1
+Spectrally Pure Endmembers,"Spectral characteristics of land cover that contains only a single class/is unmixed. For example, a pixel that is known to contain only bare soil and no vegetation (e.g. through field validation). Endmembers can then be used to estimate sub-pixel proportions of land cover classes in the rest of an image. ",7
+Sun-synchronous orbit,"A type of polar orbit of satellites, where the satellite is is synchronised to always be in the same ‘fixed’ position relative to the sun. This means that the satellite always visits the same spot at the same local time – for example, passing the city of Paris every day at noon exactly.",2
+Support Vector Machine (SVM),"A statistical tool for binary classification, which attempts to find the optimal ‘separation’ between two groups of data. ",6
+Surface reflectance,"The amount of light reflected by the surface of the Earth; the fraction of solar radiation reflected from Earth’s surface to the remote sensor. It is a ratio of surface radiance to surface irradiance, with values between 0 and 1. Compare with Top of atmosphere (TOA) reflectance.",1
+Synthetic Aperture Radar (SAR),An active sensor that collects at longer wavelengths than optical (passive) sensors. Used to detect surface through cloud cover. ,1
+Top of atmosphere (TOA) reflectance,"The reflectance measured by a remote sensor, which includes contributions/distortions from clouds and atmospheric scattering. Compare with surface reflectance.",1
+Vicarious calibration,Using handheld spectroradiometers to validate remotely sensed data,6
+Wavelength,The distance between successive peaks of an electromagnetic wave ,1
+Whisk scanning,"Sensors that use a mirror to reflect light onto a single detector. The mirror moves back and forth, to collect measurements from one pixel in he image at a time. Compare with Pushbroom scanning. ",2
+Zenith,The opposite of nadir; can be used to describe the location of the sun,2

@@ -16,6 +16,7 @@ book:
     - week6.qmd
     - week7.qmd
     - week8.qmd
+    - glossary.qmd
     - references.qmd
 
 bibliography: references.bib

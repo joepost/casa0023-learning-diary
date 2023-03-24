@@ -1,0 +1,10 @@
+# Glossary {.unnumbered}
+
+```{r glossarytbl, echo=FALSE, message=FALSE}
+library(readr)
+library(knitr)
+
+glossary <- read_csv("img/glossary_20230324.csv")
+knitr::kable(glossary, format = "html", col.names = c("Term", "Definition", "Reference Week"))
+
+```
